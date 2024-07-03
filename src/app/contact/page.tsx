@@ -1,4 +1,5 @@
 import Navbar from '@/Components/Bars/Navbar';
+import Link from 'next/link';
 import React from 'react';
 
 const page = () => {
@@ -13,7 +14,7 @@ const page = () => {
                                 <h2 className="title">Contact Us</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
-                                        <li className="breadcrumb-item"><a href="/">Home</a></li>
+                                        <li className="breadcrumb-item"><Link href="/">Home</Link></li>
                                         <li className="breadcrumb-item active" aria-current="page">Contact</li>
                                     </ol>
                                 </nav>

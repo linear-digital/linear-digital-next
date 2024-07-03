@@ -1,7 +1,9 @@
+'use client'
 import Link from 'next/link';
-import React from 'react';
 
+import React from 'react';
 const Navbar = () => {
+
     return (
         <header>
             <div id="sticky-header" className="menu-area transparent-header">
@@ -18,10 +20,10 @@ const Navbar = () => {
                                         <ul className="navigation">
                                             <li><Link href="/">Home</Link>
                                             </li>
-                                            <li className="active"><Link href="/about">About Us</Link></li>
+                                            <li className=""><Link href="/about">About Us</Link></li>
                                             <li><Link href="/#services">Services</Link></li>
                                             <li><Link href="/portfolio">Portfolio</Link></li>
-                                            <li><a href="/pricing/">Pricing</a></li>
+                                            <li><Link href="/pricing/">Pricing</Link></li>
                                         </ul>
                                     </div>
                                     <div className="header-action">

@@ -3,11 +3,12 @@
 import Navbar from '@/Components/Bars/Navbar';
 import React from 'react';
 import Pricing from '../Home/Pricing';
-import axios from 'axios';
+
 import Footer from '@/Components/Bars/Footer';
 import Accordion from 'react-bootstrap/Accordion';
 import useSWR from 'swr';
 import { fetcher } from '@/util/fetcher';
+import Link from 'next/link';
 
 const page = () => {
     // const data = await getData()
@@ -17,6 +18,9 @@ const page = () => {
     return (
         <div className='container'>
             <Navbar />
+            <div className='mt-100'>
+
+            </div>
             <Pricing />
             <section className="general-pricing mt-50">
                 <div className="section-title title-style-two text-center white-title mb-50 ">
