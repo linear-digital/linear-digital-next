@@ -55,7 +55,7 @@
 	--tg-body-font-family: 'Poppins', sans-serif;
 	--tg-heading-font-family: 'Poppins', sans-serif;
 	--tg-primary-color: #ff7020;
-	--tg-secondary-color: #5622F9;
+	--tg-secondary-color: #00000;
 	--tg-body-font-color: #666666;
 	--tg-heading-font-color: #0B0B10;
 	--tg-banner-title-color: #2A2A2A;
@@ -561,8 +561,7 @@ label {
 }
 
 .header-action .header-btn .btn span {
-	background: var(--tg-secondary-color);
-
+	background-color: black !important;
 }
 
 .navbar-wrap ul li .sub-menu {
@@ -3648,7 +3647,7 @@ label {
 	z-index: -1;
 }
 
-.counter-item-two .content{
+.counter-item-two .content {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
