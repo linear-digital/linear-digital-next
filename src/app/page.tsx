@@ -6,6 +6,7 @@ import Agency from "./Home/Agency";
 import Counter from "./Home/Counter";
 import Projects from "./Home/Projects";
 import Pricing from "./Home/Pricing";
+import Review from "./Home/Review";
 export default function Home() {
   return (
     <main >
@@ -16,6 +17,7 @@ export default function Home() {
       <Counter />
       <Projects />
       <Pricing />
+      <Review />
     </main>
   );
 }
