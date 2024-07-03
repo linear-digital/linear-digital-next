@@ -29,7 +29,7 @@ const ProjectCard = ({ item }: { item: any }) => {
                     </a>
                 </div>
                 <div className="project-details-btn">
-                    <a href="project-details.html">View Case Studies</a>
+                    <a href="#projects">View Case Studies</a>
                 </div>
             </div>
     );

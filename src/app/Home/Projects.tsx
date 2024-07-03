@@ -33,7 +33,7 @@ const Projects = () => {
     }, [category])
 
     return (
-        <section className="project-area-three">
+        <section className="project-area-three" id="projects">
             <div className="container">
                 <div className="row justify-content-end">
                     <div className="col-xl-10">
