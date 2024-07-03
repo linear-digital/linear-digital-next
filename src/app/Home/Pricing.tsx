@@ -100,42 +100,9 @@ const Pricing = async () => {
                                         </div>
                                     ))
                                 }
-                                <div className="col-lg-4 col-md-6" id="graphic-pricing-1">
-                                    {/* Graphic Pricing 1 */}
-                                    {/* Graphic Pricing 1 */}
-                                    {/* Graphic Pricing 1 */}
-                                </div>
-                                <div className="col-lg-4 col-md-6 " id="graphic-pricing-2">
-                                    {/* Graphic Pricing 2 */}
-                                    {/* Graphic Pricing 2 */}
-                                    {/* Graphic Pricing 2 */}
-                                </div>
-                                <div className="col-lg-4 col-md-6" id="graphic-pricing-3">
-                                    {/* Graphic Pricing 3 */}
-                                    {/* Graphic Pricing 3 */}
-                                    {/* Graphic Pricing 3 */}
-                                </div>
                             </div>
                         </div>
-                        <div className="tab-pane" id="year" role="tabpanel" aria-labelledby="year-tab">
-                            <div className="row g-0 align-items-center justify-content-center">
-                                <div className="col-lg-4 col-md-6" id="web-pricing-1">
-                                    {/* web Price 1 */}
-                                    {/* web Price 1 */}
-                                    {/* web Price 1 */}
-                                </div>
-                                <div className="col-lg-4 col-md-6" id="web-pricing-2">
-                                    {/* web price 2 */}
-                                    {/* web price 2 */}
-                                    {/* web price 2 */}
-                                </div>
-                                <div className="col-lg-4 col-md-6" id="web-pricing-3">
-                                    {/* web price 3  */}
-                                    {/* web price 3  */}
-                                    {/* web price 3  */}
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
