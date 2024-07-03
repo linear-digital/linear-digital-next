@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import 'swiper/css';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 export const metadata: Metadata = {
@@ -18,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body >
+        <SpeedInsights />
         {children}
       </body>
     </html>
