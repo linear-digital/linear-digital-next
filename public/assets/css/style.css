@@ -76,7 +76,7 @@
 	--tg-old-lace: #FFF2E4;
 	--tg-magnolia: #F0EBFF;
 	--tg-lavender: #E4F1FF;
-	--tg-blue: #2B78F3;
+	--tg-blue: #ff7020;
 	--tg-blue-two: #265FDB;
 	--tg-blue-two-three: #398DDB;
 	--tg-indigo: #A666F7;
@@ -710,6 +710,8 @@ label {
 	-ms-transform: translateX(101%);
 	transform: translateX(101%);
 }
+
+
 
 .mobile-menu .navbar-collapse {
 	display: block !important;

@@ -2,15 +2,28 @@
 import Link from 'next/link';
 
 import React from 'react';
+const Links = () => {
+    return <>
+        <li><Link href="/">Home</Link>
+        </li>
+        <li className=""><Link href="/about">About Us</Link></li>
+        <li><Link href="/#services">Services</Link></li>
+        <li><Link href="/portfolio">Portfolio</Link></li>
+        <li><Link href="/pricing/">Pricing</Link></li>
+    </>
+}
 const Navbar = () => {
-
+    const [open, setOpen] = React.useState(false);
     return (
         <header>
             <div id="sticky-header" className="menu-area transparent-header">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <div className="mobile-nav-toggler"><i className="fas fa-bars" /></div>
+                            <div className="mobile-nav-toggler"
+                                onClick={() => setOpen(!open)}
+                            >
+                                <i className="fas fa-bars" /></div>
                             <div className="menu-wrap">
                                 <nav className="menu-nav">
                                     <div className="logo">
@@ -18,32 +31,37 @@ const Navbar = () => {
                                     </div>
                                     <div className="navbar-wrap main-menu d-none d-lg-flex">
                                         <ul className="navigation">
-                                            <li><Link href="/">Home</Link>
-                                            </li>
-                                            <li className=""><Link href="/about">About Us</Link></li>
-                                            <li><Link href="/#services">Services</Link></li>
-                                            <li><Link href="/portfolio">Portfolio</Link></li>
-                                            <li><Link href="/pricing/">Pricing</Link></li>
+                                            <Links />
                                         </ul>
                                     </div>
                                     <div className="header-action">
                                         <ul className="list-wrap">
-                                            <li className="header-btn"><Link 
-                                            href="/contact" className="btn">
+                                            <li className="header-btn"><Link
+                                                href="/contact" className="btn">
                                                 Book a Call <span /></Link></li>
                                         </ul>
                                     </div>
                                 </nav>
                             </div>
                             {/* Mobile Menu  */}
-                            <div className="mobile-menu">
+                            <div className="mobile-menu"
+                                style={{
+                                    transform: `translateX(${open ? '0px' : '400px'})`,
+                                }}
+                            >
                                 <nav className="menu-box">
-                                    <div className="close-btn"><i className="fas fa-times" /></div>
+                                    <div className="close-btn"
+                                        onClick={() => setOpen(!open)}
+                                    >
+                                        <i className="fas fa-times" /></div>
                                     <div className="nav-logo">
                                         <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
                                     </div>
                                     <div className="menu-outer">
-                                        {/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}
+                                        <ul className="navigation">
+                                            <Links />
+                                        </ul>
+
                                     </div>
                                     <div className="social-links">
                                         <ul className="clearfix list-wrap">
