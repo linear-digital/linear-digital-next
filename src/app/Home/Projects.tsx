@@ -1,6 +1,6 @@
 'use client'
 import ProjectCard from '@/Components/Card/ProjectCard';
-import { fetcher } from '@/util/fetcher';
+
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { Pagination } from 'swiper/modules';

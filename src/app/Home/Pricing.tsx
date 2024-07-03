@@ -1,18 +1,25 @@
+'use client'
 import axios from 'axios';
-import React from 'react';
-async function getData() {
-    try {
-        const res = await axios.get('https://ld.mdtamiz.com/api/pricing')
-        // The return value is *not* serialized
-        // You can return Date, Map, Set, etc.
-        return res.data.pricing
-    } catch (error) {
-        throw new Error('Failed to fetch data')
-    }
-}
-const Pricing = async () => {
-    const data = await getData()
+import React, { useEffect } from 'react';
+import useSWR from 'swr';
+import { fetcher } from '@/util/fetcher';
 
+const Pricing = () => {
+
+    const { data } = useSWR('https://ld.mdtamiz.com/api/pricing', fetcher)
+    const [pricing, setPricing] = React.useState([]);
+    const [category, setCategory] = React.useState('Graphic');
+
+    useEffect(() => {
+        if (data) {
+            if (category === 'Graphic') {
+                setPricing(data?.pricing.slice(0, 3))
+            }
+            else {
+                setPricing(data?.pricing.slice(3, 6))
+            }
+        }
+    }, [category])
     return (
         <section className="pricing-area pb-90 pt-120">
             <div className="container">
@@ -28,19 +35,25 @@ const Pricing = async () => {
                 <div className="pricing-item-wrap">
                     <div className="pricing-tab">
                         <ul className="nav nav-tabs" id="myTab" role="tablist">
-                            <li className="nav-item" role="presentation">
-                                <button className="nav-link active" id="month-tab" data-bs-toggle="tab" data-bs-target="#month" type="button" role="tab" aria-controls="month" aria-selected="true">Graphic</button>
-                            </li>
-                            <li className="nav-item" role="presentation">
-                                <button className="nav-link" id="year-tab" data-bs-toggle="tab" data-bs-target="#year" type="button" role="tab" aria-controls="year" aria-selected="false">Website</button>
-                            </li>
+                            {
+                                ['Graphic', 'Website'].map((item: any, index: any) => (
+                                    <li className="nav-item" role="presentation">
+                                        <button className={`nav-link ${category === item ? 'active' : ''}`}
+                                            id="month-tab"
+                                            onClick={() => setCategory(item)}
+                                        >
+                                            {item}
+                                        </button>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                     <div className="tab-content" id="myTabContent">
                         <div className="tab-pane show active" id="month" role="tabpanel" aria-labelledby="month-tab">
                             <div className="row g-0 align-items-center justify-content-center">
                                 {
-                                    data.length && data?.slice(0, 3).map((item: any, index: any) => (
+                                    pricing?.map((item: any, index: any) => (
                                         <div className="col-lg-4 col-md-6" key={index} id={`web-pricing-${index + 1}`}>
                                             <div className={`pricing-item ${index === 1 ? 'active' : ''}`}>
                                                 <div className="pricing-icon">
