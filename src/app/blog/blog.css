@@ -7,13 +7,12 @@
     padding: 20px;
 }
 
-.blog-page .sidebar {
-    border: 1px solid #ccc;
-    padding: 20px;
-}
+/* .blog-page .sidebar {
+} */
 
 .blog-card {
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .blog-card .title {
@@ -34,4 +33,16 @@
 }
 .blog-card .desc {
     margin-top: 20px;
+}
+
+.blog-card-sm {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.blog-card-sm h2 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+.blog-card-sm img {
+    border-radius: 5px;
 }
