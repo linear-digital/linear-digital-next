@@ -1,3 +1,4 @@
+import Footer from '@/Components/Bars/Footer';
 import Navbar from '@/Components/Bars/Navbar';
 import Link from 'next/link';
 import React from 'react';
@@ -63,7 +64,7 @@ const page = () => {
                                     </form>
                                 </div>
                                 <div id="contact-map">
-                                    <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29408.43007778408!2d91.10179889999999!3d22.87447239999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1699190509707!5m2!1sen!2sbd" allowFullScreen loading="lazy" />
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29408.43007778408!2d91.10179889999999!3d22.87447239999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1699190509707!5m2!1sen!2sbd" allowFullScreen loading="lazy" />
                                 </div>
                                 <div className="inner-contact-info">
                                     <ul className="list-wrap">
@@ -108,7 +109,7 @@ const page = () => {
                 </div>
             </section>
 
-
+            <Footer />
         </div>
     );
 };
