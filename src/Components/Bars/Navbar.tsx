@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
@@ -11,21 +12,23 @@ const Navbar = () => {
                             <div className="menu-wrap">
                                 <nav className="menu-nav">
                                     <div className="logo">
-                                        <a href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></a>
+                                        <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
                                     </div>
                                     <div className="navbar-wrap main-menu d-none d-lg-flex">
                                         <ul className="navigation">
-                                            <li><a href="/">Home</a>
+                                            <li><Link href="/">Home</Link>
                                             </li>
-                                            <li className="active"><a href="/about">About Us</a></li>
-                                            <li><a href="/#services">Services</a></li>
-                                            <li><a href="/portfolio">Portfolio</a></li>
+                                            <li className="active"><Link href="/about">About Us</Link></li>
+                                            <li><Link href="/#services">Services</Link></li>
+                                            <li><Link href="/portfolio">Portfolio</Link></li>
                                             <li><a href="/pricing/">Pricing</a></li>
                                         </ul>
                                     </div>
                                     <div className="header-action">
                                         <ul className="list-wrap">
-                                            <li className="header-btn"><a href="#!" className="btn">Contact <span /></a></li>
+                                            <li className="header-btn"><Link 
+                                            href="/contact" className="btn">
+                                                Book a Call <span /></Link></li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -35,7 +38,7 @@ const Navbar = () => {
                                 <nav className="menu-box">
                                     <div className="close-btn"><i className="fas fa-times" /></div>
                                     <div className="nav-logo">
-                                        <a href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></a>
+                                        <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
                                     </div>
                                     <div className="menu-outer">
                                         {/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}

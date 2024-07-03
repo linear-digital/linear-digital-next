@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Link from 'next/link';
 import React from 'react';
 async function getData() {
     try {
@@ -32,10 +33,11 @@ const Slider = async () => {
                                         {data?.description}
                                     </p>
                                     <div className="slider-btn">
-                                        <a href="/contact" className="btn" data-animation="fadeInLeft" data-delay=".6s">Get
-                                            Started <span /></a>
-                                        <a href="https://www.youtube.com/watch?v=UVAyIh5V4NY?si=lv8YHAVWi2Zu3Ypn" className="popup-video" data-animation="fadeInRight" data-delay=".6s">See Live
-                                            Demo <i className="fas fa-play pulse" /></a>
+                                        <Link href="/contact" className="btn" data-animation="fadeInLeft" data-delay=".6s">Get
+                                            Started <span /></Link>
+                                        <a href="#" className="popup-video" data-animation="fadeInRight" data-delay=".6s">See Live
+                                            Demo <i className="fas fa-play pulse" />
+                                            </a>
                                     </div>
                                 </div>
                             </div>

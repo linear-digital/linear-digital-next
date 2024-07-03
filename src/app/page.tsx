@@ -7,6 +7,8 @@ import Counter from "./Home/Counter";
 import Projects from "./Home/Projects";
 import Pricing from "./Home/Pricing";
 import Review from "./Home/Review";
+import NewsLetter from "./Home/NewsLetter";
+import Footer from "@/Components/Bars/Footer";
 export default function Home() {
   return (
     <main >
@@ -18,6 +20,8 @@ export default function Home() {
       <Projects />
       <Pricing />
       <Review />
+      <NewsLetter />
+      <Footer />
     </main>
   );
 }

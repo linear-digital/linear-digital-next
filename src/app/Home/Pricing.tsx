@@ -13,13 +13,13 @@ const Pricing = () => {
     useEffect(() => {
         if (data) {
             if (category === 'Graphic') {
-                setPricing(data?.pricing.slice(0, 3))
+                setPricing(data?.pricing?.slice(0, 3))
             }
             else {
-                setPricing(data?.pricing.slice(3, 6))
+                setPricing(data?.pricing?.slice(3, 6))
             }
         }
-    }, [category])
+    }, [category, data])
     return (
         <section className="pricing-area pb-90 pt-120">
             <div className="container">
@@ -37,7 +37,7 @@ const Pricing = () => {
                         <ul className="nav nav-tabs" id="myTab" role="tablist">
                             {
                                 ['Graphic', 'Website'].map((item: any, index: any) => (
-                                    <li className="nav-item" role="presentation">
+                                    <li key={index} className="nav-item" role="presentation">
                                         <button className={`nav-link ${category === item ? 'active' : ''}`}
                                             id="month-tab"
                                             onClick={() => setCategory(item)}
