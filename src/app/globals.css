@@ -1,33 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+@import url('/assets/css/bootstrap.min.css');
+@import url('/assets/css/animate.min.css');
+@import url('/assets/css/magnific-popup.css');
+@import url('/assets/css/fontawesome-all.min.css');
+@import url('/assets/css/swiper-bundle.min.css');
+@import url('/assets/css/odometer.css');
+@import url('/assets/css/slick.css');
+@import url('/assets/css/default.css');
+@import url('/assets/css/style.css');
+@import url('/assets/css/responsive.css');
