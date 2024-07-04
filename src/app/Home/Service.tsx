@@ -10,8 +10,19 @@ async function getData() {
         throw new Error('Failed to fetch data')
     }
 }
+async function getTitle() {
+    try {
+        const res = await axios.get('https://ld.mdtamiz.com/api/titles/65240ab608b45b9c47934a08')
+        // The return value is *not* serialized
+        // You can return Date, Map, Set, etc.
+        return res.data
+    } catch (error) {
+        throw new Error('Failed to fetch data')
+    }
+}
 const Service = async () => {
     const data = await getData()
+    const content = await getTitle()
     return (
         <section className="services-area-three" id="services">
             <div className="container">
@@ -19,13 +30,10 @@ const Service = async () => {
                     <div className="col-xl-8 col-lg-8">
                         <div className="section-title title-style-two text-center mb-45">
                             <span className="sub-title">What We Do</span>
-                            <h2 className="title" id="service-title">
+                            <h2 className="title" id="service-title" dangerouslySetInnerHTML={{ __html: content?.title }}>
                                 {/* service Title  */}
-                                We Design &amp; Develop <br /> Your Vision
                             </h2>
-                            <p id="service-desc">
-                                {/* service Descricption */}
-                                We understand the importance of a strong online presence. Our team of skilled designers &amp; developers create visually stunning and highly professional design and functional websites tailored to your unique business needs.
+                            <p id="service-desc" dangerouslySetInnerHTML={{ __html: content?.description }}>
                             </p>
                         </div>
                     </div>

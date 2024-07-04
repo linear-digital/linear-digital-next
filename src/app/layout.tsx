@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import 'swiper/css';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Linear Digital Limited - Build Your editorial Design & Development.",
@@ -16,9 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-      <body >
+      <body>
         <SpeedInsights />
+        <Toaster />
         {children}
       </body>
     </html>
