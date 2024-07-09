@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 const Links = () => {
     return <>
         <li><Link href="/">Home</Link>
@@ -15,9 +15,16 @@ const Links = () => {
 }
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
+    const [scrollHeight, setScrollHeight] = React.useState(0);
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            setScrollHeight(window.scrollY)
+        })
+    },[])
+
     return (
         <header>
-            <div id="sticky-header" className="menu-area transparent-header">
+            <div id="sticky-header" className={`menu-area transparent-header ${scrollHeight > 200 ? ' sticky-menu open' : ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
