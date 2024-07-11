@@ -6,7 +6,9 @@ import axios from 'axios';
 
 const LocationDetector = () => {
     useEffect(() => {
-        axios.get('https://ipapi.co/::1/country')
+        // axios.get('https://ipapi.co/89.0.142.86/json')
+        //     .then(res => console.log(res.data))
+              api.get('/location')
             .then(res => console.log(res.data))
     }, [])
     return (
