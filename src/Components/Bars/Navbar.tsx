@@ -1,29 +1,66 @@
 'use client'
 import Cookie from "js-cookie";
 import Link from 'next/link';
+import { useParams, usePathname, useRouter } from "next/navigation";
 
 import React, { useEffect } from 'react';
-const Links = () => {
-    return <>
-        <li><Link href="/">Home</Link>
-        </li>
-        <li className=""><Link href="/about">About Us</Link></li>
-        <li><Link href="/#services">Services</Link></li>
-        <li><Link href="/portfolio">Portfolio</Link></li>
-        <li><Link href="/pricing/">Pricing</Link></li>
-        <li><Link href="/blog">Blog</Link></li>
-    </>
-}
+
+const navigations = [
+    {
+        id: 1,
+        title: "Home",
+        link: "/"
+    },
+    {
+        id: 2,
+        title: "About Us",
+        link: "/about"
+    },
+    {
+        id: 3,
+        title: "Services",
+        link: "/#services"
+    },
+    {
+        id: 4,
+        title: "Portfolio",
+        link: "/portfolio"
+    },
+    {
+        id: 5,
+        title: "Pricing",
+        link: "/pricing"
+    },
+    {
+        id: 6,
+        title: "Blog",
+        link: "/blog"
+    }
+]
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
     const [scrollHeight, setScrollHeight] = React.useState(0);
     const [country, setCountry] = React.useState("");
+    const path = usePathname();
     useEffect(() => {
         window.addEventListener('scroll', () => {
             setScrollHeight(window.scrollY)
         })
         setCountry(Cookie.get('country') || "");
     }, [])
+    const Links = () => {
+        return <>
+            {
+                navigations.map((item, index) => {
+                    return (
+                        <li key={index} className={path === item.link ? "active" : ""}>
+                            <Link href={item.link}>{item.title}</Link>
+                        </li>
+                    )
+                })
+            }
+        </>
+    }
     return (
         <header>
             <div id="sticky-header" className={`menu-area transparent-header ${scrollHeight > 200 ? ' sticky-menu open' : ''}`}>

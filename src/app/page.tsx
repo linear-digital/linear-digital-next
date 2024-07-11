@@ -10,6 +10,7 @@ import Review from "./Home/Review";
 import NewsLetter from "./Home/NewsLetter";
 import Footer from "@/Components/Bars/Footer";
 import Contact from "./Home/Contact";
+import Team from "./Home/Team";
 export default function Home() {
   return (
     <main >
@@ -20,6 +21,7 @@ export default function Home() {
       <Counter />
       <Projects />
       <Pricing />
+      <Team />
       <Review />
       <NewsLetter />
       <div className="pt-100">
