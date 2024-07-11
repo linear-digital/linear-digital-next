@@ -9,6 +9,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import useSWR from 'swr';
 import { fetcher } from '@/util/fetcher';
 import Link from 'next/link';
+import Contact from '../Home/Contact';
 
 const page = () => {
     // const data = await getData()
@@ -55,9 +56,9 @@ const page = () => {
                                 <Accordion.Item key={index} eventKey={index.toString()}>
                                     <Accordion.Header>{item.title}</Accordion.Header>
                                     <Accordion.Body>
-                                       {
-                                           item.desc
-                                       }
+                                        {
+                                            item.desc
+                                        }
                                     </Accordion.Body>
                                 </Accordion.Item>
                             )
@@ -65,7 +66,9 @@ const page = () => {
                     }
                 </Accordion>
             </section>
-
+            <div className="pt-100">
+                <Contact />
+            </div>
             <Footer />
         </div>
     );

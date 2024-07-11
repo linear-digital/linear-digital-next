@@ -1,4 +1,5 @@
 'use client'
+import Cookie from "js-cookie";
 import Link from 'next/link';
 
 import React, { useEffect } from 'react';
@@ -16,12 +17,13 @@ const Links = () => {
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
     const [scrollHeight, setScrollHeight] = React.useState(0);
+    const [country, setCountry] = React.useState("");
     useEffect(() => {
         window.addEventListener('scroll', () => {
             setScrollHeight(window.scrollY)
         })
-    },[])
-
+        setCountry(Cookie.get('country') || "");
+    }, [])
     return (
         <header>
             <div id="sticky-header" className={`menu-area transparent-header ${scrollHeight > 200 ? ' sticky-menu open' : ''}`}>
@@ -35,7 +37,8 @@ const Navbar = () => {
                             <div className="menu-wrap">
                                 <nav className="menu-nav">
                                     <div className="logo">
-                                        <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
+                                        <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" />
+                                        </Link>
                                     </div>
                                     <div className="navbar-wrap main-menu d-none d-lg-flex">
                                         <ul className="navigation">
@@ -63,7 +66,10 @@ const Navbar = () => {
                                     >
                                         <i className="fas fa-times" /></div>
                                     <div className="nav-logo">
-                                        <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
+                                        <Link href="/">
+
+                                            <img src="/assets/img/logo/logo.png" alt="Logo" />
+                                        </Link>
                                     </div>
                                     <div className="menu-outer">
                                         <ul className="navigation">
