@@ -1,9 +1,10 @@
 'use client'
 import ProjectCard from '@/Components/Card/ProjectCard';
+import api from '@/util/axios';
 
 import axios from 'axios';
 import React, { useEffect } from 'react';
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Projects = () => {
@@ -13,19 +14,17 @@ const Projects = () => {
         { name: 'All', id: 'all' },
         { name: 'Website', id: 'web' },
         { name: 'Web App', id: 'web-app' },
-        { name: 'Print Design', id: 'print' },
-        { name: 'Editorial Design', id: 'print' },
     ]
     const [category, setCategory] = React.useState('all');
     useEffect(() => {
         (
             async () => {
                 if (category === 'all') {
-                    const { data } = await axios.get(`https://ld.mdtamiz.com/api/portfolio`)
+                    const { data } = await api.get('/portfolio')
                     setData(data)
                 }
                 else {
-                    const { data } = await axios.get(`https://ld.mdtamiz.com/api/portfolio/get/${category}`)
+                    const { data } = await api.get(`/portfolio/get/${category}`)
                     setData(data)
                 }
             }
@@ -65,12 +64,16 @@ const Projects = () => {
                             <div className="tab-content" id="myTabContent">
                                 <div className="tab-pane fade show active" id="website" role="tabpanel" aria-labelledby="website-tab">
                                     <Swiper
+                                        autoplay={{
+                                            delay: 2500,
+                                            disableOnInteraction: false,
+                                        }}
                                         slidesPerView={3}
                                         spaceBetween={30}
                                         pagination={{
                                             clickable: true,
                                         }}
-                                        modules={[Pagination]}
+                                        modules={[Pagination, Autoplay]}
                                         className="mySwiper"
                                     >
                                         {

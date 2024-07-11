@@ -3,14 +3,15 @@ import React from 'react';
 import SliderEdit from './_UI/SliderEdit';
 import ServiceEdit from './_UI/ServiceEdit';
 import EditAgency from './_UI/EditAgency';
+import WhyPeople from './_UI/WhyPeople';
 
 const page = () => {
     return (
         <div>
-            <Navbar />
             <SliderEdit />
             <ServiceEdit />
             <EditAgency />
+            <WhyPeople />
         </div>
     );
 };

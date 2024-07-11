@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import './Tailwind.css'
 import 'swiper/css';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Toaster } from "react-hot-toast";
+import LocationDetector from "@/util/LocationDetector";
 
 export const metadata: Metadata = {
   title: "Linear Digital Limited - Build Your editorial Design & Development.",
@@ -17,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <LocationDetector />
         <SpeedInsights />
         <Toaster />
         {children}

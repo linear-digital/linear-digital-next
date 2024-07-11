@@ -1,8 +1,8 @@
-import axios from 'axios';
+import api from '@/util/axios';
 import React from 'react';
 async function getData() {
     try {
-        const res = await axios.get('https://ld.mdtamiz.com/api/titles/652ed33c185f243a20a18115')
+        const res = await api.get('/titles/652ed33c185f243a20a18115')
         // The return value is *not* serialized
         // You can return Date, Map, Set, etc.
         return res.data

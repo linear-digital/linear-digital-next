@@ -4203,7 +4203,7 @@ label {
 
 .project-details-btn a:hover {
 	background: var(--tg-secondary-color);
-	color: var(--tg-white);
+	color: var(--tg-black);
 }
 
 .project-top-content {

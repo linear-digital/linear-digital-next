@@ -1,5 +1,6 @@
 
 'use client'
+import api from '@/util/axios';
 import { fetcher } from '@/util/fetcher';
 import axios from 'axios';
 import React from 'react';
@@ -18,7 +19,7 @@ const EditAgency = () => {
     }, [data])
     const updateData = async () => {
         try {
-            const res = await axios.put('https://ld.mdtamiz.com/api/titles/65240a3908b45b9c479349ff', content)
+            const res = await api.put('/titles/65240a3908b45b9c479349ff', content)
             toast.success("Updated Successfully!")
         } catch (error) {
             toast.error("Something went wrong!")

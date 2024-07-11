@@ -1,4 +1,5 @@
 'use client'
+import api from '@/util/axios';
 import { fetcher } from '@/util/fetcher';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -52,15 +53,15 @@ const ServiceEdit = () => {
     const updateService = async (service: string) => {
         try {
             if (service === "service1") {
-                await axios.put(`https://ld.mdtamiz.com/api/services/${services[0]._id}`, services[0])
+                await api.put(`/services/${services[0]._id}`, services[0])
                 toast.success("Updated Successfully!")
             }
             if (service === "service2") {
-                await axios.put(`https://ld.mdtamiz.com/api/services/${services[1]._id}`, services[1])
+                await api.put(`/services/${services[1]._id}`, services[1])
                 toast.success("Updated Successfully!")
             }
             if (service === "service3") {
-                await axios.put(`https://ld.mdtamiz.com/api/services/${services[2]._id}`, services[2])
+                await api.put(`/services/${services[2]._id}`, services[2])
                 toast.success("Updated Successfully!")
             }
         } catch (error) {
@@ -73,7 +74,7 @@ const ServiceEdit = () => {
     })
     const updateData = async () => {
         try {
-            await axios.put('https://ld.mdtamiz.com/api/titles/65240ab608b45b9c47934a08', content)
+            await api.put('/titles/65240ab608b45b9c47934a08', content)
             toast.success("Updated Successfully!")
         } catch (error) {
             toast.error("Something went wrong!")
