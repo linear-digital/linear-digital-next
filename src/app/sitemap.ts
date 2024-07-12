@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: 'https://lineardigital.co/portfolio',
             lastModified: new Date(),
             changeFrequency: 'monthly',
-            priority: 0.8,
+            priority: 0.7,
         },
         {
             url: 'https://lineardigital.co/pricing',

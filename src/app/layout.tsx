@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Toaster } from "react-hot-toast";
 import LocationDetector from "@/util/LocationDetector";
 export const metadata: Metadata = {
-  title: "Linear Digital Limited - Build Your editorial Design & Development.",
+  title: "Linear Digital Limited - Build Your Design & Development.",
   description: "Linear Digital: We craft stunning websites & captivating graphic design. Grow your brand online.",
   icons: {
     icon: { url: "/favicon.ico" },
