@@ -1,8 +1,9 @@
 
+import { Image } from 'antd';
 import React from 'react';
 
 const ProjectCard = ({ item }: { item: any }) => {
- 
+
     return (
         <div className="project-item-three">
 
@@ -26,12 +27,10 @@ const ProjectCard = ({ item }: { item: any }) => {
             }}
 
             >
-                <a href={item.images[0]}>
-                    {/* <Image fill src={item.images[0]} alt="" /> */}
-                </a>
+                <Image height={290} src={item.images[0]} alt="" />
             </div>
             <div className="project-details-btn">
-                <a href={item?.url} className='hover:text-black' target='_blank' rel='noreferrer'>Click To Preview</a>
+                <a href={item.category !== "print" ? item?.url : item.images[0]} className='hover:text-black' target='_blank' rel='noreferrer'>Click To Preview</a>
             </div>
         </div>
     );
