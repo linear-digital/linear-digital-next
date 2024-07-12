@@ -3,7 +3,7 @@ import axios from "axios";
 const local = 'http://localhost:4000/api'
 const server = 'https://ld.mdtamiz.com/api'
 const api = axios.create({
-    baseURL: local,
+    baseURL: server,
 })
 
 export default api
