@@ -5,15 +5,22 @@ interface Props {
     name: string;
     url: string;
     description: string;
+    category: string;
 }
 
-const ProjectCard_LG = ({ images, name, url, description }: Props) => {
+const ProjectCard_LG = ({ images, name, url, description, category }: Props) => {
+
     return (
         <div className="portfolio-item">
             <div className="image" style={{}}>
-                <a target="_blank" href={url}>
-                    <img loading="lazy" src={images[0]} alt="" />
-                </a>
+                <img loading="lazy" src={images[0]} alt="" />
+                {
+                    category !== "print" && <a href={url} target="_blank" className="overlay">
+                        <div className='a'>
+                            Visit Website <i className="fas fa-plus"></i>
+                        </div>
+                    </a>
+                }
             </div>
             <div className="portfolio-details">
                 <h1>

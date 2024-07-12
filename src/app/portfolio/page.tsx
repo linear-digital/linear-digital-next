@@ -35,7 +35,7 @@ const page = async () => {
                     {
                         data?.map((item: any) => {
                             return (
-                                <ProjectCard_LG key={item.id} images={item.images} name={item.name} url={item.url} description={item.description} />
+                                <ProjectCard_LG key={item._id} images={item.images} name={item.name} url={item.url} description={item.description} category={item.category}/>
                             )
                         }
                         )

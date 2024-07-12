@@ -6,19 +6,19 @@ import Cookie from "js-cookie";
 import ScrollToTop from "react-scroll-to-top";
 
 const LocationDetector = () => {
-    useEffect(() => {
-        // axios.get('https://ipapi.co/89.0.142.86/json')
-        //     .then(res => console.log(res.data))
-        api.get('/location')
-            .then(res => {
-                Cookie.set('country', res.data.country);
-            })
-    }, [])
-    return (
-        <div>
-            <ScrollToTop smooth color="white" style={{ backgroundColor: "var(--tg-primary-color" }} />
-        </div>
-    );
+  useEffect(() => {
+    // axios.get('https://ipapi.co/89.0.142.86/json')
+    //     .then(res => console.log(res.data))
+    api.get('/location')
+      .then(res => {
+        Cookie.set('country', res.data.country);
+      })
+  }, [])
+  return (
+    <div>
+      <ScrollToTop smooth color="white" style={{ backgroundColor: "var(--tg-primary-color" }} />
+    </div>
+  );
 };
 
 export default LocationDetector;
