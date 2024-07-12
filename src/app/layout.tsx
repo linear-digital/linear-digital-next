@@ -8,6 +8,11 @@ import LocationDetector from "@/util/LocationDetector";
 export const metadata: Metadata = {
   title: "Linear Digital Limited - Build Your editorial Design & Development.",
   description: "Linear Digital: We craft stunning websites & captivating graphic design. Grow your brand online.",
+  icons: {
+    icon: { url: "/favicon.ico" },
+    shortcut: { url: "/favicon.ico" },
+    apple: { url: "/favicon.ico" },
+  }
 };
 
 export default function RootLayout({
