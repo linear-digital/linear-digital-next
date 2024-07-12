@@ -13,7 +13,7 @@ const page = () => {
                     <div className="row">
                         <div className="col-12">
                             <div className="breadcrumb-content">
-                                <h2 className="title">Contact Us</h2>
+                                <h1 className="title">Contact Us</h1>
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
                                         <li className="breadcrumb-item"><Link href="/">Home</Link></li>

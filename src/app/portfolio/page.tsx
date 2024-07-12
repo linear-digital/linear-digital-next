@@ -18,7 +18,7 @@ const page = async () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="breadcrumb-content">
-                                    <h2 className="title">Our Portfolio</h2>
+                                    <h1 className="title">Our Portfolio</h1>
                                     <nav aria-label="breadcrumb">
                                         <ol className="breadcrumb">
                                             <li className="breadcrumb-item"><Link href="/">Home</Link></li>

@@ -27,9 +27,9 @@ const Slider = async () => {
                             </div>
                             <div className="col-lg-6">
                                 <div className="slider-content">
-                                    <h2 id="hero-title" className="title" data-animation="fadeInUp" data-delay=".2s">
+                                    <h1 id="hero-title" className="title" data-animation="fadeInUp" data-delay=".2s">
                                         {data?.title}
-                                    </h2>
+                                    </h1>
                                     <p id="hero-desc" data-animation="fadeInUp" data-delay=".4s">
                                         {data?.description}
                                     </p>
