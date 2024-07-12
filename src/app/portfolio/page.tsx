@@ -7,6 +7,16 @@ const getData = async () => {
     const res = await api.get('/portfolio')
     return res.data
 }
+import type { Metadata, ResolvingMetadata } from 'next'
+export async function generateMetadata(
+    parent: ResolvingMetadata
+  ): Promise<Metadata> {
+    // read route params
+ 
+    return {
+      title: "Linear Digital Limited - Our Portfolio",
+    }
+  }
 const page = async () => {
     const data = await getData()
     return (

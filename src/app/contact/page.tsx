@@ -3,7 +3,16 @@ import Navbar from '@/Components/Bars/Navbar';
 import Link from 'next/link';
 import React from 'react';
 import Contact from '../Home/Contact';
-
+import type { Metadata, ResolvingMetadata } from 'next'
+export async function generateMetadata(
+    parent: ResolvingMetadata
+  ): Promise<Metadata> {
+    // read route params
+ 
+    return {
+      title: "Linear Digital Limited - Contact Us",
+    }
+  }
 const page = () => {
     return (
         <div>

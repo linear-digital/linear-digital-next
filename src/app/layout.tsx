@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     icon: { url: "/favicon.ico" },
     shortcut: { url: "/favicon.ico" },
     apple: { url: "/favicon.ico" },
+  },
+  openGraph: {
+    title: "Linear Digital Limited - Build Your Design & Development.",
+    description: "Linear Digital: We craft stunning websites & captivating graphic design. Grow your brand online.",
+    images: [
+      '/logo.png'
+    ]
   }
 };
 
@@ -23,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        
+
         <LocationDetector />
         <SpeedInsights />
         <Toaster />
