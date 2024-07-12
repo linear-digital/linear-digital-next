@@ -1,3 +1,4 @@
+import { Image } from 'antd';
 import React from 'react';
 
 interface Props {
@@ -13,7 +14,7 @@ const ProjectCard_LG = ({ images, name, url, description, category }: Props) => 
     return (
         <div className="portfolio-item">
             <div className="image" style={{}}>
-                <img loading="lazy" src={images[0]} alt="" />
+                <Image loading="lazy" src={images[0]} alt="" />
                 {
                     category !== "print" && <a href={url} target="_blank" className="overlay">
                         <div className='a'>
