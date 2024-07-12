@@ -3,9 +3,8 @@ import Navbar from '@/Components/Bars/Navbar';
 import Link from 'next/link';
 import React from 'react';
 import Contact from '../Home/Contact';
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 export async function generateMetadata(
-    parent: ResolvingMetadata
   ): Promise<Metadata> {
     // read route params
  

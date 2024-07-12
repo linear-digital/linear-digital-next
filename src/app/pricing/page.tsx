@@ -6,9 +6,8 @@ import Pricing from '../Home/Pricing';
 import Footer from '@/Components/Bars/Footer';
 import Contact from '../Home/Contact';
 import ClientData from './_ClientData/ClientData';
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 export async function generateMetadata(
-    parent: ResolvingMetadata
   ): Promise<Metadata> {
     // read route params
  

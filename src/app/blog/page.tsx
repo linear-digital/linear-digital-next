@@ -3,16 +3,15 @@ import './blog.css'
 import BlogCard from './_UI/BlogCard';
 import BlogCard_SM from './_UI/BlogCard_SM';
 
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 export async function generateMetadata(
-    parent: ResolvingMetadata
-  ): Promise<Metadata> {
+): Promise<Metadata> {
     // read route params
- 
+
     return {
-      title: "Linear Digital Limited - Blog",
+        title: "Linear Digital Limited - Blog",
     }
-  }
+}
 const page = () => {
     return (
         <div className='blog-page container'>

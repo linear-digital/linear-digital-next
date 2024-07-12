@@ -7,9 +7,8 @@ const getData = async () => {
     const res = await api.get('/portfolio')
     return res.data
 }
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 export async function generateMetadata(
-    parent: ResolvingMetadata
   ): Promise<Metadata> {
     // read route params
  

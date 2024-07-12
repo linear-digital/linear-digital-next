@@ -4,9 +4,8 @@ import Counter from '../Home/Counter';
 import Review from '../Home/Review';
 import Footer from '@/Components/Bars/Footer';
 import Team from '../Home/Team';
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata, } from 'next'
 export async function generateMetadata(
-    parent: ResolvingMetadata
   ): Promise<Metadata> {
     // read route params
  
