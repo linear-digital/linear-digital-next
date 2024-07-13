@@ -61,6 +61,9 @@ const Navbar = () => {
             }
         </>
     }
+    if (path.includes('admin')) {
+        return null
+    }
     return (
         <header>
             <div id="sticky-header" className={`menu-area transparent-header ${scrollHeight > 200 ? ' sticky-menu open' : ''}`}>
