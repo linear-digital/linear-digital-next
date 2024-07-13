@@ -85,7 +85,8 @@ const Contact = () => {
                                         </div>
                                         <div className="form-grp">
                                             <label htmlFor="comment"><i className="fas fa-user-edit" /></label>
-                                            <textarea required name="message" id="message" placeholder="How can we help you? Feel free to get in touch!" defaultValue={""}
+                                            <textarea 
+                                            required name="message" id="message" placeholder="How can we help you? Feel free to get in touch!"
                                                 value={details.message}
                                                 onChange={updateState}
                                             />
