@@ -41,6 +41,8 @@ export default function RootLayout({
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-3PNPEWRPT8`}
         />
+        <Script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></Script>
+
         <Script
           dangerouslySetInnerHTML={{
             __html: `

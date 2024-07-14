@@ -94,9 +94,14 @@ const Review = () => {
                                 </Swiper>
                             </div>
                         </div>
-
                     </div>
                 </div>
+                <div className="trustpilot-widget mt-5" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="66940176a28d00325aac52a2" data-style-height="52px" data-style-width="100%">
+
+                    <a href="https://www.trustpilot.com/review/lineardigital.co" target="_blank" rel="noopener">Trustpilot</a>
+                </div>
+
+
                 <div className="testimonial-swiper-pagination" />
             </div>
             <div className="testimonial-shape-wrap">
