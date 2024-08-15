@@ -7,12 +7,19 @@ interface Props {
     url: string;
     description: string;
     category: string;
+    delay: number;
 }
 
-const ProjectCard_LG = ({ images, name, url, description, category }: Props) => {
+const ProjectCard_LG = ({ images, name, url, description, category, delay }: Props) => {
 
     return (
-        <div className="portfolio-item">
+        <div className="portfolio-item"
+            style={{
+                animationDelay: `${delay}s`,
+                animationFillMode: "forwards",
+                animation: `${delay}s ease-in alternate forwards running fadeInDown`,
+            }}
+        >
             <div className="image" style={{}}>
                 <Image loading="lazy" src={images[0]} alt="" />
                 {
@@ -24,7 +31,7 @@ const ProjectCard_LG = ({ images, name, url, description, category }: Props) => 
                 }
             </div>
             <div className="portfolio-details">
-                <h1>
+                <h1 >
                     {name}
                 </h1>
                 <p>

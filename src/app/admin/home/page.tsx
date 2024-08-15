@@ -1,5 +1,5 @@
-import Navbar from '@/Components/Bars/Navbar';
-import React from 'react';
+'use client'
+import React, { useEffect } from 'react';
 import SliderEdit from './_UI/SliderEdit';
 import ServiceEdit from './_UI/ServiceEdit';
 import EditAgency from './_UI/EditAgency';

@@ -67,9 +67,7 @@ const Pricing = () => {
                                                         {item.description}
                                                     </p>
                                                 </div>
-                                                <div className="pricing-price">
-                                                    <h2 className="price"><span>$</span>${item.price}<strong /></h2>
-                                                </div>
+                                               
                                                 <div className="pricing-list">
                                                     <h4 className="title">Everything in Starter</h4>
                                                     <ul className="list-wrap">
@@ -106,7 +104,9 @@ const Pricing = () => {
                                                     </ul>
                                                 </div>
                                                 <div className="pricing-btn">
-                                                    <a href="#" className="btn">Select This Plan</a>
+                                                    <a href="#" className="btn">
+                                                        Request a Quote
+                                                    </a>
                                                 </div>
                                             </div>
 

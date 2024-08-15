@@ -7012,13 +7012,14 @@ label {
 }
 
 .portfolio-details h1 {
-	font-size: 24px;
-	line-height: 32px;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 25px;
 
 }
 
 .portfolio-details p {
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 24px;
 
 }

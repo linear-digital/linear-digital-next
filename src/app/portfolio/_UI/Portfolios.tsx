@@ -19,28 +19,7 @@ const Portfolios = ({ data }: { data: any }) => {
             setCategory("all");
         }
     }, [])
-    const categorys = [
-        {
-            name: "Featured",
-            id: "all"
-        },
-        {
-            name: "Banner & Ads",
-            id: "banner-ads"
-        },
-        {
-            name: "Prints",
-            id: "prints"
-        },
-        {
-            name: "Presentations",
-            id: "presentations"
-        },
-        {
-            name: "Website",
-            id: "web"
-        }
-    ]
+    
     useEffect(() => {
         if (category === "all") {
             setProjects(data)
@@ -63,7 +42,7 @@ const Portfolios = ({ data }: { data: any }) => {
             })
             setProjects(dataNew)
         }
-        else if (category === "prints") {
+        else if (category === "print") {
             const dataNew = data?.filter((item: any) => {
                 return item?.category === "print"
             })
@@ -75,7 +54,11 @@ const Portfolios = ({ data }: { data: any }) => {
     }, [category, data])
     return (
         <section className=''>
-            <div className='d-flex justify-content-center align-items-center flex-wrap w-full gap-2 mb-5'>
+            <div className='d-flex justify-content-center align-items-center flex-wrap w-full'
+                style={{
+                    marginBottom: "60px",
+                }}
+            >
                 {
                     categorys?.map((item: any) => {
                         return (
@@ -97,18 +80,50 @@ const Portfolios = ({ data }: { data: any }) => {
                     })
                 }
             </div>
-            <div className="portfolio-section">
-                {
-                    projects?.map((item: any) => {
-                        return (
-                            <ProjectCard_LG key={item._id} images={item.images} name={item.name} url={item.url} description={item.description} category={item.category} />
-                        )
-                    }
-                    )
-                }
-            </div>
+            {
+                projects?.length > 0 ?
+                    <div className="portfolio-section">
+                        {
+                            projects?.map((item: any, index: number) => {
+                                return (
+                                    <ProjectCard_LG delay={index * 0.5} key={item._id} images={item.images} name={item.name} url={item.url} description={item.description} category={item.category} />
+                                )
+                            }
+                            )
+                        }
+                    </div>
+                    :
+                    <h2 className="text-center">No projects found</h2>
+            }
         </section>
     );
 };
 
 export default Portfolios;
+
+export const categorys = [
+    {
+        name: "Featured",
+        id: "all"
+    },
+    {
+        name: "Logos",
+        id: "logos"
+    },
+    {
+        name: "Banner & Ads",
+        id: "banner-ads"
+    },
+    {
+        name: "Prints & Publications",
+        id: "print"
+    },
+    {
+        name: "Presentations",
+        id: "presentations"
+    },
+    {
+        name: "Website",
+        id: "web"
+    }
+]

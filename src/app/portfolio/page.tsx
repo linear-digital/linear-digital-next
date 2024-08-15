@@ -9,6 +9,7 @@ const getData = async () => {
 }
 import type { Metadata } from 'next'
 import Portfolios from './_UI/Portfolios';
+import Footer from '@/Components/Bars/Footer';
 export async function generateMetadata(
   ): Promise<Metadata> {
     // read route params
@@ -24,7 +25,7 @@ const page = async () => {
         <div>
             <Navbar />
             <div className="container">
-                <section className="breadcrumb-area breadcrumb-area-four pt-140 pb-100">
+                <section className="breadcrumb-area breadcrumb-area-four pt-140 pb-60">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
@@ -43,6 +44,7 @@ const page = async () => {
                 </section>
                 <Portfolios data={data}/>
             </div>
+            <Footer />
         </div>
     );
 };
