@@ -8,6 +8,7 @@ const getData = async () => {
     return res.data
 }
 import type { Metadata } from 'next'
+import Portfolios from './_UI/Portfolios';
 export async function generateMetadata(
   ): Promise<Metadata> {
     // read route params
@@ -17,6 +18,7 @@ export async function generateMetadata(
     }
   }
 const page = async () => {
+    // get category from search params
     const data = await getData()
     return (
         <div>
@@ -39,17 +41,7 @@ const page = async () => {
                         </div>
                     </div>
                 </section>
-                <section className="portfolio-section" >
-
-                    {
-                        data?.map((item: any) => {
-                            return (
-                                <ProjectCard_LG key={item._id} images={item.images} name={item.name} url={item.url} description={item.description} category={item.category}/>
-                            )
-                        }
-                        )
-                    }
-                </section>
+                <Portfolios data={data}/>
             </div>
         </div>
     );

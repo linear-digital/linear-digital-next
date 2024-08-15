@@ -1,3 +1,4 @@
+
 @import url('/assets/css/bootstrap.min.css');
 @import url('/assets/css/animate.min.css');
 @import url('/assets/css/magnific-popup.css');
@@ -8,6 +9,8 @@
 @import url('/assets/css/default.css');
 @import url('/assets/css/style.css');
 @import url('/assets/css/responsive.css');
+
+
 
 
 html {
@@ -122,4 +125,28 @@ html {
 .image:hover .overlay {
     display: flex;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.502), rgba(0, 0, 0, 0.509));
+}
+
+.category-btn {
+    border: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+}
+.category-btn-active {
+    border: 2px solid #ff7220e3;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+}
+.category-btn-active:hover {
+    border: 2px solid black;
+}
+.category-btn:hover {
+    border: 2px solid black;
 }
