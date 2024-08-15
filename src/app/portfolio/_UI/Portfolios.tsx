@@ -89,7 +89,7 @@ const Portfolios = ({ data }: { data: any }) => {
                                 onClick={() => setCategory(item.id)}
                             >
                                 <Link href={`/portfolio?category=${item.id}`}
-                                    key={item.id} className="category-btn">
+                                    key={item.id} className={`${item.id === category ? "category-btn-active" : "category-btn"}`}>
                                     {item.name}
                                 </Link>
                             </button>
