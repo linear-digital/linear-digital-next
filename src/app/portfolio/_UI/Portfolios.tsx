@@ -57,6 +57,12 @@ const Portfolios = ({ data }: { data: any }) => {
             })
             setProjects(dataNew)
         }
+        else if (category === "presentations") {
+            const dataNew = data?.filter((item: any) => {
+                return item?.category === "presentations"
+            })
+            setProjects(dataNew)
+        }
         else if (category === "prints") {
             const dataNew = data?.filter((item: any) => {
                 return item?.category === "print"
