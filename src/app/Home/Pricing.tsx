@@ -8,11 +8,11 @@ const Pricing = () => {
 
     const { data } = useSWR('https://ld.mdtamiz.com/api/pricing', fetcher)
     const [pricing, setPricing] = React.useState([]);
-    const [category, setCategory] = React.useState('Graphic');
+    const [category, setCategory] = React.useState('graphic');
 
     useEffect(() => {
         if (data) {
-            if (category === 'Graphic') {
+            if (category === 'graphic') {
                 setPricing(data?.pricing?.slice(0, 3))
             }
             else {
@@ -36,13 +36,23 @@ const Pricing = () => {
                     <div className="pricing-tab">
                         <ul className="nav nav-tabs" id="myTab" role="tablist">
                             {
-                                ['Graphic', 'Website'].map((item: any, index: any) => (
+                                [{
+                                    name: 'Graphics',
+                                    id: 1,
+                                    value: 'graphic'
+                                },
+                                {
+                                    name: 'Websites',
+                                    id: 2,
+                                    value: 'website'
+                                }
+                            ].map((item, index: any) => (
                                     <li key={index} className="nav-item" role="presentation">
-                                        <button className={`nav-link ${category === item ? 'active' : ''}`}
+                                        <button className={`nav-link ${category === item.value ? `active${index}` : ''}`}
                                             id="month-tab"
-                                            onClick={() => setCategory(item)}
+                                            onClick={() => setCategory(item.value)}
                                         >
-                                            {item}
+                                            {item.name}
                                         </button>
                                     </li>
                                 ))

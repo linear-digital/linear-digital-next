@@ -1,115 +1,74 @@
-'use client';
+
+import Footer from '@/Components/Bars/Footer';
+import api from '@/util/axios';
+import { Image } from 'antd';
+import Link from 'next/link';
 import React from 'react';
-import { Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-const Review = () => {
+const getallreview = async () => {
+    const res = await api.get('/review')
+    return res.data
+}
+const Review = async ({ page }: any) => {
+    const review = await getallreview()
     return (
-        <section className="testimonial-area-three">
+        <section className="testimonial-area-two">
             <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-md-8">
-                        <div className="section-title title-style-two white-title mb-45">
-                            <h2 className="title">Some Words From <br /> Our Customers</h2>
-                        </div>
+                <h1 className='text-center'>
+                    What Our Clients Have To Say
+                </h1>
+                <p className='text-center'>
+                    Get it all with Linear Digital. They do.
+                </p>
+                <div
+                    style={{
+                        boxShadow: 'whitesmoke 0px 5px 5px',
+                        borderRadius: '20px',
+                        backgroundColor: 'white'
+                    }}
+                    className='px-lg-5 px-sm-4 pt-2 pb-5 '
+                >
+                    <div className="review-grid gap-4 justify-content-center" >
+                        {
+                            page === "main" ?
+                                review?.map((item: any, index: number) => {
+                                    return (
+                                        <div key={index} className="rounded overflow-hidden ">
+                                            <Image src={item.image} className='' alt="" width={'100%'} style={{
+                                                objectFit: 'cover',
+                                                borderRadius: '5px',
+                                                overflow: 'hidden'
+                                            }} />
+                                        </div>
+                                    )
+                                })
+                                :
+                                review?.slice(0, 9).map((item: any, index: number) => {
+                                    return (
+                                        <div key={index} className="rounded overflow-hidden">
+                                            <Image src={item.image} className='' alt="" width={'100%'} style={{
+                                                objectFit: 'cover',
+                                                borderRadius: '5px',
+                                                overflow: 'hidden'
+                                            }} />
+                                        </div>
+                                    )
+                                })
+                        }
                     </div>
-                    <div className="col-md-4">
-                        <div className="testimonial-nav">
-                            <button className="swiper-button-prev" />
-                            <button className="swiper-button-next" />
+                    {
+                        page !== "main" &&
+                        <div className="d-flex justify-content-center mt-4">
+                            <Link href={'/review'} className='btn-search px-5 py-3 ' style={{
+                                fontSize: '16px',
+                                borderRadius: '10px',
+                            }}>View All</Link>
                         </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="swiper-container testimonial-active-three">
-                            <div className="swiper-wrapper">
-                                <Swiper
-                                    slidesPerView={3}
-                                    spaceBetween={30}
-                                    pagination={{
-                                        clickable: true,
-                                    }}
-                                    modules={[Pagination]}
-                                    className="swiper-wrapper"
-                                >
-                                    <SwiperSlide>
-                                        <div className="testimonial-item-three">
-                                            <div className="testimonial-thumb-three">
-                                                <img src="/assets/img/images/testimonial_avatar01.png" alt="" />
-                                            </div>
-                                            <div className="testimonial-content-three">
-                                                <h4 className="title">jaytradz</h4>
-                                                <span>Germany</span>
-                                                <p>“Very professional and gave me everything I asked for and more. Gave
-                                                    important detail and gave each page a matching stock photo to enhance
-                                                    the story on every page. Highly recommend !!!!”</p>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="swiper-slide">
-                                            <div className="testimonial-item-three">
-                                                <div className="testimonial-thumb-three">
-                                                    <img src="/assets/img/images/testimonial_avatar01.png" alt="" />
-                                                </div>
-                                                <div className="testimonial-content-three">
-                                                    <h4 className="title">jaytradz</h4>
-                                                    <span>Germany</span>
-                                                    <p>“Very professional and gave me everything I asked for and more. Gave
-                                                        important detail and gave each page a matching stock photo to enhance
-                                                        the story on every page. Highly recommend !!!!”</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="testimonial-item-three">
-                                            <div className="testimonial-thumb-three">
-                                                <img src="/assets/img/images/testimonial_avatar01.png" alt="" />
-                                            </div>
-                                            <div className="testimonial-content-three">
-                                                <h4 className="title">involve_people</h4>
-                                                <span>United Kingdom</span>
-                                                <p>“This Flatform was great, very responsive to feedback and change
-                                                    requests. The end results was exactly what I needed in terms of quality
-                                                    and it was delivered on time. Very satisfied, great job! Thank you.”</p>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="testimonial-item-three">
-                                            <div className="testimonial-thumb-three">
-                                                <img src="/assets/img/images/testimonial_avatar01.png" alt="" />
-                                            </div>
-                                            <div className="testimonial-content-three">
-                                                <h4 className="title">Milfordriddle</h4>
-                                                <span>United States</span>
-                                                <p>“Linear Digital is top notch, quality work and quick turnaround, easy to
-                                                    communicate with. They elevates the work we request from them into
-                                                    something even better - look forward to work with for a long time”</p>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="trustpilot-widget mt-5" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="66940176a28d00325aac52a2" data-style-height="52px" data-style-width="100%">
+                    }
 
-                    <a href="https://www.trustpilot.com/review/lineardigital.co" target="_blank" rel="noopener">Trustpilot</a>
                 </div>
 
-
-                <div className="testimonial-swiper-pagination" />
             </div>
-            <div className="testimonial-shape-wrap">
-                <img src="/assets/img/images/testimonial_shape01.png" alt="" />
-                <img src="/assets/img/images/testimonial_shape02.png" alt="" />
-                <img src="/assets/img/images/testimonial_shape03.png" alt="" />
-                <img src="/assets/img/images/testimonial_shape04.png" alt="" />
-            </div>
+            <Footer />
         </section>
 
     );

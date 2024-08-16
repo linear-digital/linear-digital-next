@@ -169,3 +169,26 @@ html {
     font-size: 14px;
     border: none;
 }
+.btn-search:hover {
+    color: white;
+}
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .review-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}

@@ -49,7 +49,7 @@ const UploadImage = ({ imageUrl, setImageUrl }: { imageUrl: string, setImageUrl:
             <Upload
                 name="image"
                 listType="picture-card"
-                className="avatar-uploader"
+                className="avatar-uploader "
                 showUploadList={false}
                 action="https://ld.mdtamiz.com/api/upload"
                 onChange={handleChange}
