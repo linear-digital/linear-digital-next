@@ -68,7 +68,6 @@ const Review = async ({ page }: any) => {
                 </div>
 
             </div>
-            <Footer />
         </section>
 
     );
