@@ -31,10 +31,11 @@ const Footer = () => {
                                 <div className="footer-social-two">
                                     <ul className="list-wrap">
                                         <li className="title">Follow us</li>
-                                        <li><a target="_blank" href="https://www.facebook.com/lineardigitalbd"><img src="/assets/img/icon/footer_icon01.png" alt="" /></a></li>
-                                        <li><a href="#"><img src="/assets/img/icon/footer_icon02.png" alt="" /></a></li>
-                                        <li><a href="#"><img src="/assets/img/icon/footer_icon03.png" alt="" /></a></li>
-                                        <li><a href="#"><img src="/assets/img/icon/footer_icon04.png" alt="" /></a></li>
+                                        <li><a target="_blank" href="https://www.facebook.com/lineardigitalbd"><img src="/assets/img/icon/new/facebook.png" width={32} alt="" /></a></li>
+                                        <li className='ms-2'>
+                                            <a href="https://www.linkedin.com/company/lineardigital" target="_blank">
+                                            <img src="/assets/img/icon/new/in.png" width={32} alt="" /></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

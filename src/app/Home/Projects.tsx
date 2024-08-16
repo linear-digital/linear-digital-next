@@ -11,9 +11,9 @@ const Projects = () => {
 
     const [data, setData] = React.useState([]);
     const categoryes = [
-        { name: 'All', id: 'all' },
-        { name: 'Website', id: 'web' },
-        { name: 'Web App', id: 'web-app' },
+        { name: 'Featured', id: 'all' },
+        { name: 'Websites', id: 'web' },
+        { name: 'Graphics', id: 'print' },
     ]
     const [category, setCategory] = React.useState('all');
     useEffect(() => {

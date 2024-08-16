@@ -85,8 +85,8 @@ const Contact = () => {
                                         </div>
                                         <div className="form-grp">
                                             <label htmlFor="comment"><i className="fas fa-user-edit" /></label>
-                                            <textarea 
-                                            required name="message" id="message" placeholder="How can we help you? Feel free to get in touch!"
+                                            <textarea
+                                                required name="message" id="message" placeholder="How can we help you? Feel free to get in touch!"
                                                 value={details.message}
                                                 onChange={updateState}
                                             />
@@ -95,45 +95,52 @@ const Contact = () => {
                                     </form>
                                 </div>
                                 <div id="contact-map">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29408.43007778408!2d91.10179889999999!3d22.87447239999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1699190509707!5m2!1sen!2sbd" allowFullScreen loading="lazy" />
+                                    <div className="inner-contact-info">
+                                        <ul className="list-wrap">
+                                            <li>
+                                                <div className="contact-info-item">
+                                                    <div className="icon">
+                                                        <img src="/assets/img/icon/loction_icon03.png" alt="" />
+                                                    </div>
+                                                    <div className="content">
+                                                        <h6 className="title">Address</h6>
+                                                        <p>Maijdee Court, Noakhali, Bangladesh</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="contact-info-item">
+                                                    <div className="icon">
+                                                        <img src="/assets/img/icon/mail_icon03.png" alt="" />
+                                                    </div>
+                                                    <div className="content">
+                                                        <h6 className="title">Email</h6>
+                                                        <a href="mailto:tasrif@lineardigital.co"
+                                                            target='_blank'
+                                                        >tasrif@lineardigital.co</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="contact-info-item">
+                                                    <div className="icon"
+                                                        style={{
+                                                            display: 'flex', justifyContent: 'center', alignItems: 'center',
+                                                            backgroundColor: '#25d36521', borderRadius: '50%', width: '60px', minHeight: '60px'
+                                                        }}
+                                                    >
+                                                        <img src="/assets/img/icon/new/whatsapp.png" width={50} height={50} alt="" />
+                                                    </div>
+                                                    <div className="content">
+                                                        <h6 className="title">Whatsapp</h6>
+                                                        <a href="https://wa.me/+8801609814396" target='_blank'>+8801609814396</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div className="inner-contact-info">
-                                    <ul className="list-wrap">
-                                        <li>
-                                            <div className="contact-info-item">
-                                                <div className="icon">
-                                                    <img src="/assets/img/icon/loction_icon03.png" alt="" />
-                                                </div>
-                                                <div className="content">
-                                                    <h6 className="title">Address</h6>
-                                                    <p>Maijdee Court, Noakhali, Bangladesh</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="contact-info-item">
-                                                <div className="icon">
-                                                    <img src="/assets/img/icon/mail_icon03.png" alt="" />
-                                                </div>
-                                                <div className="content">
-                                                    <h6 className="title">Email</h6>
-                                                    <a href="mailto:tasrif@lineardigital.net">tasrif@lineardigital.net</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="contact-info-item">
-                                                <div className="icon">
-                                                    <img src="/assets/img/icon/phone_icon03.png" alt="" />
-                                                </div>
-                                                <div className="content">
-                                                    <h6 className="title">Phone</h6>
-                                                    <a href="tel:+8801609814396">+8801609814396</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+
                             </div>
                         </div>
                     </div>

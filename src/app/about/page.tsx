@@ -7,29 +7,25 @@ import Team from '../Home/Team';
 import type { Metadata, } from 'next'
 import Services_Ab from './_ui/Services_Ab';
 export async function generateMetadata(
-  ): Promise<Metadata> {
+): Promise<Metadata> {
     // read route params
- 
+
     return {
-      title: "Linear Digital Limited - About Us",
+        title: "Linear Digital Limited - About Us",
     }
-  }
+}
 const page = () => {
     return (
         <div>
             <Navbar />
             <section className="breadcrumb-area pt-175 pb-140">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="breadcrumb-content">
-                                <h1 className="title">About Us</h1>
-                                <nav aria-label="breadcrumb">
-                                    <ol className="breadcrumb">
-                                        <li className="breadcrumb-item"><a href="/">Home</a></li>
-                                        <li className="breadcrumb-item active" aria-current="page">About Us</li>
-                                    </ol>
-                                </nav>
+                    <div className="row justify-content-center">
+                        <div className="col-lg-7">
+                            <div className="section-title title-style-two text-center white-title">
+                                <h2 className="title text-black">About Us</h2>
+                                <p className='mt-3'>Find the perfect fit! Choose from tiered plans with features tailored to your
+                                    needs. All at budget-friendly prices.</p>
                             </div>
                         </div>
                     </div>

@@ -11,6 +11,7 @@ import Footer from "@/Components/Bars/Footer";
 import Contact from "./Home/Contact";
 import Team from "./Home/Team";
 import Services_Ab from "./about/_ui/Services_Ab";
+import ClientData from "./pricing/_ClientData/ClientData";
 export default function Home() {
   return (
     <main >
@@ -24,10 +25,11 @@ export default function Home() {
       <Pricing />
       <Team />
       <Review />
-      <NewsLetter />
+      <ClientData page="home"/>
       <div className="pt-100">
         <Contact />
       </div>
+      <NewsLetter />
       <Footer />
     </main>
   );

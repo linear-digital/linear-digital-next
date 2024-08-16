@@ -23,7 +23,7 @@ const page = () => {
 
             </div>
             <Pricing />
-            <ClientData />
+            <ClientData page='pricing'/>
             <div className="pt-100">
                 <Contact />
             </div>

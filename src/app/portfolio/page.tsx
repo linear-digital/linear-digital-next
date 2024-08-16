@@ -11,13 +11,13 @@ import type { Metadata } from 'next'
 import Portfolios from './_UI/Portfolios';
 import Footer from '@/Components/Bars/Footer';
 export async function generateMetadata(
-  ): Promise<Metadata> {
+): Promise<Metadata> {
     // read route params
- 
+
     return {
-      title: "Linear Digital Limited - Our Portfolio",
+        title: "Linear Digital Limited - Our Portfolio",
     }
-  }
+}
 const page = async () => {
     // get category from search params
     const data = await getData()
@@ -25,24 +25,21 @@ const page = async () => {
         <div>
             <Navbar />
             <div className="container">
-                <section className="breadcrumb-area breadcrumb-area-four pt-140 pb-60">
+
+                <section className="breadcrumb-area breadcrumb-area-four pt-200 pb-60">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-12">
-                                <div className="breadcrumb-content">
-                                    <h1 className="title">Our Portfolio</h1>
-                                    <nav aria-label="breadcrumb">
-                                        <ol className="breadcrumb">
-                                            <li className="breadcrumb-item"><Link href="/">Home</Link></li>
-                                            <li className="breadcrumb-item active" aria-current="page">Portfolio</li>
-                                        </ol>
-                                    </nav>
+                        <div className="row justify-content-center">
+                            <div className="col-lg-7">
+                                <div className="section-title title-style-two text-center white-title">
+                                    <h2 className="title text-black">Our Portfolio</h2>
+                                    <p className='mt-3'>Find the perfect fit! Choose from tiered plans with features tailored to your
+                                        needs. All at budget-friendly prices.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <Portfolios data={data}/>
+                <Portfolios data={data} />
             </div>
             <Footer />
         </div>

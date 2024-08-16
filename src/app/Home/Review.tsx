@@ -13,12 +13,18 @@ const Review = async ({ page }: any) => {
     return (
         <section className="testimonial-area-two">
             <div className="container">
-                <h1 className='text-center'>
-                    What Our Clients Have To Say
-                </h1>
-                <p className='text-center'>
-                    Get it all with Linear Digital. They do.
-                </p>
+                <div className="row justify-content-center mt-120">
+                    <div className="col-lg-10">
+                        <div className="section-title title-style-two text-center white-title mb-50 ">
+                            <h2 className="title text-black">
+                                What Our Clients Say
+                            </h2>
+                            <p className='mt-3'>
+                                Get it all with Linear Digital. They do.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div
                     style={{
                         boxShadow: 'whitesmoke 0px 5px 5px',

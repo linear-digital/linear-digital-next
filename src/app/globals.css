@@ -178,7 +178,14 @@ html {
     gap: 10px;
     margin-top: 50px;
 }
-
+.accordion-item {
+border: none;
+background-color: #f1f3f5df;
+}
+.accordion-item .accordion-button {
+    background-color: #f1f3f5df;
+    font-weight: 600;
+}
 @media screen and (max-width: 1000px) {
     .review-grid {
         grid-template-columns: repeat(2, 1fr);

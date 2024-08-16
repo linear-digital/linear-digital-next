@@ -19,6 +19,8 @@ const Team = () => {
                         <TeamMemberCard />
                         <TeamMemberCard />
                         <TeamMemberCard />
+                        <TeamMemberCard />
+                        <TeamMemberCard />
                     </div>
                 </div>
             </section>

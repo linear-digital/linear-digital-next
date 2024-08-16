@@ -6,6 +6,8 @@ import Link from 'next/link';
 import api from '@/util/axios';
 import { Image } from 'antd';
 import UpdateReview from './_UI/UpdateReview';
+import Contact from '@/app/Home/Contact';
+import Footer from '@/Components/Bars/Footer';
 
 const page = () => {
     const [refesh, setRefesh] = React.useState("");
@@ -43,7 +45,7 @@ const page = () => {
                     }
                 </div>
             </div>
-
+        
         </div>
     );
 };

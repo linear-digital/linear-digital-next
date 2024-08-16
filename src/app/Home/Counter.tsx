@@ -13,7 +13,7 @@ async function getData() {
 const Counter = async () => {
     const data = await getData()
     return (
-        <section className="counter-area-two pt-120 pb-120">
+        <section className="counter-area-two  pb-120">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 order-0 order-lg-2">
