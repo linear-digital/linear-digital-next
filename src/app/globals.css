@@ -179,7 +179,6 @@ html {
     margin-top: 50px;
 }
 
-
 @media screen and (max-width: 1000px) {
     .review-grid {
         grid-template-columns: repeat(2, 1fr);

@@ -1,7 +1,6 @@
 
 import Navbar from "@/Components/Bars/Navbar";
 import Slider from "@/app/Home/Slider";
-import Service from "@/app/Home/Service";
 import Agency from "./Home/Agency";
 import Counter from "./Home/Counter";
 import Projects from "./Home/Projects";
@@ -11,12 +10,14 @@ import NewsLetter from "./Home/NewsLetter";
 import Footer from "@/Components/Bars/Footer";
 import Contact from "./Home/Contact";
 import Team from "./Home/Team";
+import Services_Ab from "./about/_ui/Services_Ab";
 export default function Home() {
   return (
     <main >
       <Navbar />
       <Slider />
-      <Service />
+      <Services_Ab />
+      {/* <Service /> */}
       <Agency />
       <Counter />
       <Projects />

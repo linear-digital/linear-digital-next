@@ -5,6 +5,7 @@ import Review from '../Home/Review';
 import Footer from '@/Components/Bars/Footer';
 import Team from '../Home/Team';
 import type { Metadata, } from 'next'
+import Services_Ab from './_ui/Services_Ab';
 export async function generateMetadata(
   ): Promise<Metadata> {
     // read route params
@@ -39,110 +40,7 @@ const page = () => {
                 </div>
             </section>
             <Counter />
-            <section className="inner-services-area pt-110 pb-100">
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-6">
-                            <div className="section-title title-style-two text-center mb-60">
-                                <span className="sub-title">Graphic Service</span>
-                                <h2 className="title">Creative &amp; Branding Design</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="inner-services-item-wrap">
-                        <div className="row justify-content-center">
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                                <div className="services-item-four">
-                                    <div className="services-icon-four">
-                                        <img src="/assets/img/icon/inner_services_icon01.png" alt="" />
-                                    </div>
-                                    <div className="services-content-four">
-                                        <h2 className="title"><a href="services-details.html">Advertising</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                                <div className="services-item-four">
-                                    <div className="services-icon-four">
-                                        <img src="/assets/img/icon/inner_services_icon02.png" alt="" />
-                                    </div>
-                                    <div className="services-content-four">
-                                        <h2 className="title"><a href="services-details.html">Development</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                                <div className="services-item-four">
-                                    <div className="services-icon-four">
-                                        <img src="/assets/img/icon/inner_services_icon03.png" alt="" />
-                                    </div>
-                                    <div className="services-content-four">
-                                        <h2 className="title"><a href="services-details.html">Branding</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                                <div className="services-item-four">
-                                    <div className="services-icon-four">
-                                        <img src="/assets/img/icon/inner_services_icon04.png" alt="" />
-                                    </div>
-                                    <div className="services-content-four">
-                                        <h2 className="title"><a href="services-details.html">Product Design</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                                <div className="services-item-four">
-                                    <div className="services-icon-four">
-                                        <img src="/assets/img/icon/inner_services_icon05.png" alt="" />
-                                    </div>
-                                    <div className="services-content-four">
-                                        <h2 className="title"><a href="services-details.html">Software</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                                <div className="services-item-four">
-                                    <div className="services-icon-four">
-                                        <img src="/assets/img/icon/inner_services_icon06.png" alt="" />
-                                    </div>
-                                    <div className="services-content-four">
-                                        <h2 className="title"><a href="services-details.html">Marketing</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                                <div className="services-item-four">
-                                    <div className="services-icon-four">
-                                        <img src="/assets/img/icon/inner_services_icon07.png" alt="" />
-                                    </div>
-                                    <div className="services-content-four">
-                                        <h2 className="title"><a href="services-details.html">Cinematography</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                                <div className="services-item-four">
-                                    <div className="services-icon-four">
-                                        <img src="/assets/img/icon/inner_services_icon08.png" alt="" />
-                                    </div>
-                                    <div className="services-content-four">
-                                        <h2 className="title"><a href="services-details.html">Strategy Services</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* <Services_Ab /> */}
             {/* success Area Start */}
             <section className="success-area pb-120">
                 <div className="container">
@@ -288,7 +186,7 @@ const page = () => {
                 <Team />
             </div>
 
-            <Review />
+            {/* <Review /> */}
             <Footer />
         </div>
     );

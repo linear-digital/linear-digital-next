@@ -27,6 +27,11 @@ const navigations = [
         link: "/portfolio"
     },
     {
+        id: 4,
+        title: "Reviews",
+        link: "/review"
+    },
+    {
         id: 5,
         title: "Pricing",
         link: "/pricing"

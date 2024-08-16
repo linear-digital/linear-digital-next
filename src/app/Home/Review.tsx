@@ -36,7 +36,9 @@ const Review = async ({ page }: any) => {
                                             <Image src={item.image} className='' alt="" width={'100%'} style={{
                                                 objectFit: 'cover',
                                                 borderRadius: '5px',
-                                                overflow: 'hidden'
+                                                overflow: 'hidden',
+                                                padding: '8px',
+                                                backgroundColor: '#010901'
                                             }} />
                                         </div>
                                     )
@@ -48,7 +50,9 @@ const Review = async ({ page }: any) => {
                                             <Image src={item.image} className='' alt="" width={'100%'} style={{
                                                 objectFit: 'cover',
                                                 borderRadius: '5px',
-                                                overflow: 'hidden'
+                                                overflow: 'hidden',
+                                                padding: '8px',
+                                                backgroundColor: '#010901'
                                             }} />
                                         </div>
                                     )
