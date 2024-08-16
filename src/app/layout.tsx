@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     apple: { url: "/favicon.ico" },
   },
   openGraph: {
-    title: "Linear Digital Limited - Build Your Design & Development.",
-    description: "Linear Digital: We craft stunning websites & captivating graphic design. Grow your brand online.",
+    title: "Linear Digital Limited - We Provide Graphics, Web & Development Services",
+    description: "Linear Digital: Scale Up Your Creative Content Production With Reliable And Hassle-Free Design And Development Services.",
     images: [
       'https://lineardigital.co/logo.png'
     ]
