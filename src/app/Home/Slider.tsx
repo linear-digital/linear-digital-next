@@ -27,6 +27,11 @@ const Slider = async () => {
                             </div>
                             <div className="col-lg-6">
                                 <div className="slider-content">
+                                    <div className="section-title title-style-two ">
+                                        <span className="sub-title" style={{
+                                            fontSize: "30px",
+                                        }}>Linear Digital Agency</span>
+                                    </div>
                                     <h1 id="hero-title" className="title" data-animation="fadeInUp" data-delay=".2s">
                                         {data?.title}
                                     </h1>
@@ -38,7 +43,7 @@ const Slider = async () => {
                                             Started <span /></Link>
                                         <a href="#" className="popup-video" data-animation="fadeInRight" data-delay=".6s">See Live
                                             Demo <i className="fas fa-play pulse" />
-                                            </a>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
