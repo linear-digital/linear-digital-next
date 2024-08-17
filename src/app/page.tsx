@@ -19,7 +19,7 @@ export default function Home() {
       <Slider />
       <Services_Ab />
       {/* <Service /> */}
-      <Agency />
+      {/* <Agency /> */}
       <Counter />
       <Projects />
       <Pricing />

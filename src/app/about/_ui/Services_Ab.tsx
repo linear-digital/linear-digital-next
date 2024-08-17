@@ -4,7 +4,6 @@ import { ServiceType } from '@/app/admin/service/page';
 import { fetcher } from '@/util/fetcher';
 import React from 'react';
 import useSWR from 'swr';
-import PresentationIcon from './presentation.png';
 
 const Services_Ab = () => {
     const { data } = useSWR('https://ld.mdtamiz.com/api/services', fetcher);
@@ -22,7 +21,10 @@ const Services_Ab = () => {
                                 <span className="sub-title">
                                     What We Do
                                 </span>
-                                <h2 className="title">Creative &amp; Branding Design</h2>
+                                <h2 className="title">
+                                    On-Demand Graphic
+                                    & Web Design
+                                </h2>
                             </div>
                         </div>
                     </div>
@@ -101,7 +103,7 @@ const Services_Ab = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-8">
                                 <div className="services-item-four">
                                     <div className="services-icon-four">

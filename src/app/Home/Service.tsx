@@ -1,6 +1,7 @@
+'use client'
 import api from '@/util/axios';
-import axios from 'axios';
 import React from 'react';
+import useSWR from 'swr';
 async function getData() {
     try {
         const res = await api.get('/services')
@@ -21,9 +22,10 @@ async function getTitle() {
         throw new Error('Failed to fetch data')
     }
 }
-const Service = async () => {
-    const data = await getData()
-    const content = await getTitle()
+const Service = () => {
+    const { data } = useSWR('', async () => await getData())
+    const { data: content } = useSWR('', async () => await getTitle())
+
     return (
         <section className="services-area-three" id="services">
             <div className="container">
