@@ -68,13 +68,23 @@ const Projects = () => {
                                             delay: 2500,
                                             disableOnInteraction: false,
                                         }}
-                                        slidesPerView={3}
+                                        breakpoints={{
+                                            0: {
+                                                slidesPerView: 1,
+                                            },
+                                            768: {
+                                                slidesPerView: 1,
+                                            },
+                                            1200: {
+                                                slidesPerView: 3,
+                                            },
+                                        }}
                                         spaceBetween={30}
                                         pagination={{
                                             clickable: true,
                                         }}
                                         modules={[Pagination, Autoplay]}
-                                        className="mySwiper"
+                                        className="mySwiper pe-3 w-full"
                                     >
                                         {
                                             data?.map((item: any, index: number) => (

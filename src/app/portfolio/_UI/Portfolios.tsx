@@ -54,7 +54,7 @@ const Portfolios = ({ data }: { data: any }) => {
     }, [category, data])
     return (
         <section className=''>
-            <div className='d-flex justify-content-center align-items-center flex-wrap w-full'
+            <div className='d-flex justify-content-center align-items-center flex-wrap w-full gap-3'
                 style={{
                     marginBottom: "60px",
                 }}
