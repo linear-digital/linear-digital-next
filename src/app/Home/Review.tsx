@@ -1,15 +1,16 @@
-
+'use client'
 import Footer from '@/Components/Bars/Footer';
 import api from '@/util/axios';
 import { Image } from 'antd';
 import Link from 'next/link';
 import React from 'react';
+import useSWR from 'swr';
 const getallreview = async () => {
     const res = await api.get('/review')
     return res.data
 }
-const Review = async ({ page }: any) => {
-    const review = await getallreview()
+const Review = ({ page }: any) => {
+    const { data: review } = useSWR('https://ld.mdtamiz.com/api/review', async () => await getallreview())
     return (
         <section className="testimonial-area-two">
             <div className="container">
