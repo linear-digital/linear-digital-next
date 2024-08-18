@@ -35,7 +35,7 @@ const Slider = () => {
                                         }}>Linear Digital Agency</span>
                                     </div>
                                     <h1 id="hero-title" className="title" data-animation="fadeInUp" data-delay=".2s">
-                                        {data?.title}
+                                        {data?.title || "Graphics & Web  Development Services."}
                                     </h1>
                                     <p id="hero-desc" data-animation="fadeInUp" data-delay=".4s">
                                         {data?.description}
