@@ -1,26 +1,20 @@
+'use client'
+
 import Navbar from '@/Components/Bars/Navbar';
 import api from '@/util/axios';
-import Link from 'next/link';
+
 import React from 'react';
-import ProjectCard_LG from './_UI/ProjectCard_LG';
 const getData = async () => {
     const res = await api.get('/portfolio')
     return res.data
 }
-import type { Metadata } from 'next'
 import Portfolios from './_UI/Portfolios';
 import Footer from '@/Components/Bars/Footer';
-export async function generateMetadata(
-): Promise<Metadata> {
-    // read route params
+import useSWR from 'swr';
 
-    return {
-        title: "Linear Digital Limited - Our Portfolio",
-    }
-}
-const page = async () => {
+const page =  () => {
     // get category from search params
-    const data = await getData()
+    const { data } = useSWR('/portfolio', async () => await getData())
     return (
         <div>
             <Navbar />
