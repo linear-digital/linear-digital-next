@@ -9,7 +9,6 @@ const page = () => {
     return (
         <div>
             <SliderEdit />
-            <ServiceEdit />
             <EditAgency />
             <WhyPeople />
         </div>

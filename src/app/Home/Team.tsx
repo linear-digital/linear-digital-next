@@ -1,7 +1,14 @@
+'use client'
 import TeamMemberCard from '@/Components/Card/TeamMemberCard';
+import { fetcher } from '@/util/fetcher';
 import React from 'react';
+import useSWR from 'swr';
+import { ITeamProps } from '../admin/team/_UI/Team';
 
 const Team = () => {
+    const {data} = useSWR('https://ld.mdtamiz.com/api/team', fetcher);
+
+    const team = data as ITeamProps[];
     return (
         <div>
             <section className="pricing-area pb-120 ">
@@ -16,11 +23,9 @@ const Team = () => {
                         </div>
                     </div>
                     <div className="team-container">
-                        <TeamMemberCard />
-                        <TeamMemberCard />
-                        <TeamMemberCard />
-                        <TeamMemberCard />
-                        <TeamMemberCard />
+                       {
+                           team?.map((item) => <TeamMemberCard key={item._id} item={item} edit={false}/>)
+                       }
                     </div>
                 </div>
             </section>

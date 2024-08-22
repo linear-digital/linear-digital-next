@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect } from 'react';
+import Topbar from './_UI/Topbar';
 
 const layout = ({ children }: { children: React.ReactNode }) => {
     const [open, setOpen] = React.useState(false);
@@ -27,8 +28,8 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     }
     return (
         <div>
-            <div className="flex gap-5">
-                {/* <Sidebar /> */}
+            <div className="flex flex-col gap-5">
+               <Topbar />
                 {children}
             </div>
         </div>
