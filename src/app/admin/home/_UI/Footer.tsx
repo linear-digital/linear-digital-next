@@ -1,11 +1,22 @@
-
-'use client'
+import api from '@/util/axios';
 import { fetcher } from '@/util/fetcher';
 import React from 'react';
+import toast from 'react-hot-toast';
 import useSWR from 'swr';
 
 const Footer = () => {
     const { data } = useSWR('https://ld.mdtamiz.com/api/titles/66c8ad9ab31d2cc0b1eccc5e', fetcher);
+    const [content, setContent] = React.useState<any>({
+        description: "",
+    });
+    const updateData = async () => {
+        try {
+            const res = await api.put('https://ld.mdtamiz.com/api/titles/66c8ad9ab31d2cc0b1eccc5e', content);
+            toast.success("Updated Successfully!")
+        } catch (err) {
+            toast.error("Something went wrong!")
+        }
+    }
     return (
         <footer>
             <div className="footer-area-two footer-area-three">
@@ -17,7 +28,17 @@ const Footer = () => {
                                     <div className="logo">
                                         <a href="/"><img src="/assets/img/logo/logo.png" alt="" /></a>
                                     </div>
-                                    <p>
+                                    <p
+                                        contentEditable="true"
+                                        onInput={(e) => setContent({ ...content, description: e.currentTarget?.textContent })}
+                                        onKeyUp={(e)=> {
+                                            if (e.key === "Enter") {
+                                                e.preventDefault();
+                                                e.currentTarget.blur();
+                                                updateData();
+                                            }
+                                        }}
+                                    >
                                         {data?.description}
                                     </p>
                                 </div>
