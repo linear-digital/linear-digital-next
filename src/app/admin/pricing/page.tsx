@@ -23,7 +23,7 @@ export interface Pricing {
 const page = () => {
     const { data } = useSWR('https://ld.mdtamiz.com/api/pricing', fetcher);
     if (!data) {
-        return <div>Loading...</div>;
+        return <div className='text-center'>Loading...</div>;
     }
     const pricing: Pricing[] = data.pricing || [];
     return (

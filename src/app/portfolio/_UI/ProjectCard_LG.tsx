@@ -17,7 +17,7 @@ const ProjectCard_LG = ({ images, name, url, description, category, delay }: Pro
             style={{
                 animationDelay: `${delay}s`,
                 animationFillMode: "forwards",
-                animation: `${delay}s ease-in alternate forwards running fadeInDown`,
+                animation: `${1.5}s ease-in alternate forwards running fadeInDown`,
             }}
         >
             <div className="image" style={{}}>

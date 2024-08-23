@@ -22,7 +22,7 @@ const page = () => {
         }
     }
     if (!data) {
-        return <div>Loading...</div>;
+        return <div className='text-center'>Loading...</div>;
     }
     return (
         <div className='container py-4'>
