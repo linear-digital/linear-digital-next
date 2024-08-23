@@ -2,7 +2,6 @@ import React from 'react';
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { ITeamProps } from '@/app/admin/team/_UI/Team';
-import { title } from 'process';
 import UploadImage from '@/app/admin/portfolio/_UI/Upload';
 import TagSelector from './TagSelector';
 import api from '@/util/axios';

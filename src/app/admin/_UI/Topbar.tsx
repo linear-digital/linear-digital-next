@@ -19,6 +19,7 @@ const Topbar = () => {
                         <Link className="nav-item nav-link active" href="/admin/portfolio">Portfolios</Link>
                         <Link className="nav-item nav-link active" href="/admin/team">Team</Link>
                         <Link className="nav-item nav-link active" href="/admin/pricing">Pricing</Link>
+                        <Link className="nav-item nav-link active" href="/admin/general">General Pricing</Link>
                         <Link className="nav-item nav-link active" href="/admin/about">About</Link>
                     </div>
                 </div>
