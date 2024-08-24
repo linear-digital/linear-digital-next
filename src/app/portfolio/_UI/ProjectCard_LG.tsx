@@ -23,7 +23,7 @@ const ProjectCard_LG = ({ images, name, url, description, category, delay }: Pro
             <div className="image" style={{}}>
                 <Image loading="lazy" src={images[0]} alt="" />
                 {
-                    category !== "print" && <a href={url} target="_blank" className="overlay">
+                    (category === "web" || category === "web-app") && <a href={url} target="_blank" className="overlay">
                         <div className='a'>
                             Visit Website <i className="fas fa-plus"></i>
                         </div>
