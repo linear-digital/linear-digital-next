@@ -92,9 +92,9 @@ const Navbar = () => {
                                     </div>
                                     <div className="header-action">
                                         <ul className="list-wrap">
-                                            <li className="header-btn"><Link
-                                                href="/contact" className="btn">
-                                                Book a Call <span /></Link></li>
+                                            <li className="header-btn"><a
+                                                href="https://calendly.com/tasrif/linear-digital-ltd" target="_blank" className="btn">
+                                                Book a Call <span /></a></li>
                                         </ul>
                                     </div>
                                 </nav>

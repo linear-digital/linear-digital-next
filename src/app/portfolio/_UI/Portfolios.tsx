@@ -129,7 +129,7 @@ export const categorys = [
         id: "presentations"
     },
     {
-        name: "Website",
+        name: "Websites",
         id: "web"
     }
 ]
