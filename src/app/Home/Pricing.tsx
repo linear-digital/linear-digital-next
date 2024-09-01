@@ -20,6 +20,13 @@ const Pricing = () => {
             }
         }
     }, [category, data])
+
+    const sendMessageOnwhatsapp = async (data: any) => {
+        const message = `Hi, \n\n  I am interested in  your (${data?.category}: ${data?.name}) plan. Can we discuss it together?`
+        const url = `https://wa.me/+8801581743206?text=${message}`
+        window.open(url, '_blank')
+
+    }
     return (
         <section className="pricing-area pb-90 pt-120">
             <div className="container">
@@ -29,6 +36,7 @@ const Pricing = () => {
                             <h2 className="title text-black">The Right Plan for Your Business</h2>
                             <p >Find the perfect fit! Choose from tiered plans with features tailored to your
                                 needs. All at budget-friendly prices.</p>
+
                         </div>
                     </div>
                 </div>
@@ -46,7 +54,7 @@ const Pricing = () => {
                                     id: 2,
                                     value: 'website'
                                 }
-                            ].map((item, index: any) => (
+                                ].map((item, index: any) => (
                                     <li key={index} className="nav-item" role="presentation">
                                         <button className={`nav-link ${category === item.value ? `active${index}` : ''}`}
                                             id="month-tab"
@@ -77,7 +85,7 @@ const Pricing = () => {
                                                         {item.description}
                                                     </p>
                                                 </div>
-                                               
+
                                                 <div className="pricing-list">
                                                     <h4 className="title">Everything in Starter</h4>
                                                     <ul className="list-wrap">
@@ -114,9 +122,13 @@ const Pricing = () => {
                                                     </ul>
                                                 </div>
                                                 <div className="pricing-btn">
-                                                    <a href="#" className="btn">
+                                                    <button
+                                                        onClick={() => {
+                                                            sendMessageOnwhatsapp(item)
+                                                        }}
+                                                        className="btn">
                                                         Request a Quote
-                                                    </a>
+                                                    </button>
                                                 </div>
                                             </div>
 
