@@ -23,7 +23,7 @@ const Pricing = () => {
 
     const sendMessageOnwhatsapp = async (data: any) => {
         const message = `Hi, \n\n  I am interested in  your (${data?.category}: ${data?.name}) plan. Can we discuss it together?`
-        const url = `https://wa.me/+8801581743206?text=${message}`
+        const url = `https://wa.me/+8801609814396?text=${message}`
         window.open(url, '_blank')
 
     }
