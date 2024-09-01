@@ -76,6 +76,7 @@ html {
 
 .team-member-card .overlay .details .experiance {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
 }
@@ -89,8 +90,8 @@ html {
 }
 
 .team-member-card .overlay .details .experiance .item:hover {
-    color: black;
-    background-color: whitesmoke;
+    color: white;
+    background-color: var(--tg-primary-color);
     border-radius: 10px;
 }
 
