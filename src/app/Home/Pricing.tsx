@@ -8,12 +8,15 @@ const Pricing = () => {
 
     const { data } = useSWR('https://ld.mdtamiz.com/api/pricing', fetcher)
     const [pricing, setPricing] = React.useState([]);
-    const [category, setCategory] = React.useState('graphic');
+    const [category, setCategory] = React.useState('website');
 
     useEffect(() => {
         if (data) {
             if (category === 'graphic') {
                 setPricing(data?.pricing?.slice(0, 3))
+            }
+            else if (category === 'ui-ux') {
+                setPricing(data?.pricing?.slice(3, 6))
             }
             else {
                 setPricing(data?.pricing?.slice(3, 6))
@@ -50,8 +53,13 @@ const Pricing = () => {
                                     value: 'graphic'
                                 },
                                 {
-                                    name: 'Websites',
+                                    name: 'UI/UX',
                                     id: 2,
+                                    value: 'ui-ux'
+                                },
+                                {
+                                    name: 'Websites',
+                                    id: 3,
                                     value: 'website'
                                 }
                                 ].map((item, index: any) => (

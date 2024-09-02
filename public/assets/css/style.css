@@ -5394,6 +5394,14 @@ label {
 	/* animation: 0.5s ease-in-out  alternate forwards running fadeInLeft; */
 }
 
+.pricing-item-wrap .nav-tabs .nav-link.active2 {
+	box-shadow: 0px 5px 10px rgba(238, 159, 130, 0.697);
+	font-weight: 600;
+	background: var(--tg-primary-color);
+	color: var(--tg-white);
+	animation-delay: 0.5s;
+	animation: 0.7s ease-in-out  alternate forwards running fadeInLeft;
+}
 .pricing-item-wrap .nav-tabs .nav-link.active1 {
 	box-shadow: 0px 5px 10px rgba(238, 159, 130, 0.697);
 	font-weight: 600;
