@@ -19,7 +19,7 @@ const Portfolios = ({ data }: { data: any }) => {
             setCategory("all");
         }
     }, [])
-    
+
     useEffect(() => {
         if (category === "all") {
             setProjects(data)
@@ -45,6 +45,12 @@ const Portfolios = ({ data }: { data: any }) => {
         else if (category === "print") {
             const dataNew = data?.filter((item: any) => {
                 return item?.category === "print"
+            })
+            setProjects(dataNew)
+        }
+        else if (category === "ui-ux") {
+            const dataNew = data?.filter((item: any) => {
+                return item?.category === "ui-ux"
             })
             setProjects(dataNew)
         }
@@ -127,6 +133,10 @@ export const categorys = [
     {
         name: "Presentations",
         id: "presentations"
+    },
+    {
+        name: "UI/UX",
+        id: "ui-ux"
     },
     {
         name: "Websites",

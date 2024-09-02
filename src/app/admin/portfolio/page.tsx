@@ -36,7 +36,6 @@ const page = () => {
                         return <option key={item?.id} value={item?.id}>{item?.name}</option>
                     })
                 }
-                <option value={"web-app"}>Web App</option>
             </select>
             <div className="row mt-20">
                 <div className="col-auto">
