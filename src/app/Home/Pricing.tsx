@@ -8,7 +8,7 @@ const Pricing = () => {
 
     const { data } = useSWR('https://ld.mdtamiz.com/api/pricing', fetcher)
     const [pricing, setPricing] = React.useState([]);
-    const [category, setCategory] = React.useState('website');
+    const [category, setCategory] = React.useState('graphic');
 
     useEffect(() => {
         if (data) {
