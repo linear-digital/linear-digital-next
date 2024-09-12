@@ -25,6 +25,27 @@ export const metadata: Metadata = {
     description: "Linear Digital: Scale Up Your Creative Content Production With Reliable And Hassle-Free Design And Development Services.",
     images: [
       'https://lineardigital.co/logo.png'
+    ],
+    tags: [
+      "website development", 
+      "graphic design services", 
+      "digital branding", 
+      "creative agency", 
+      "web design", 
+      "custom websites", 
+      "UI/UX design", 
+      "marketing solutions", 
+      "logo design", 
+      "creative development", 
+      "web solutions", 
+      "business branding",
+      "web development",
+      "website design",
+      "lineardigital",
+      "linear digital",
+      "linear digital limited",
+      "linear digital ltd",
+      "lineardigital.co",
     ]
   }
 };
