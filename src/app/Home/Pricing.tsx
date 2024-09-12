@@ -16,7 +16,7 @@ const Pricing = () => {
                 setPricing(data?.pricing?.slice(0, 3))
             }
             else if (category === 'ui-ux') {
-                setPricing(data?.pricing?.slice(3, 6))
+                setPricing(data?.pricing?.slice(6, 9))
             }
             else {
                 setPricing(data?.pricing?.slice(3, 6))
