@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     shortcut: { url: "/favicon.ico" },
     apple: { url: "/favicon.ico" },
   },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
   openGraph: {
     title: "Linear Digital Limited - We Provide Graphics, Web & Development Services",
     description: "Linear Digital: Scale Up Your Creative Content Production With Reliable And Hassle-Free Design And Development Services.",
