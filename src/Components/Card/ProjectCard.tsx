@@ -8,12 +8,13 @@ const ProjectCard = ({ item }: { item: any }) => {
         <div className="project-item-three">
 
           
-            <div className="project-thumb-three" style={{
-                backgroundImage: `url(${item.images[0]})`,
+            <div className="project-thumb-three" 
+            style={{
+                // backgroundImage: `url(${item.images[0]})`,
                 height: "320px",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
+                // backgroundSize: "cover",
+                // backgroundPosition: "center",
+                // backgroundRepeat: "no-repeat",
             }}
 
             >
