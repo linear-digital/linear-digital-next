@@ -6,7 +6,7 @@ import React from 'react';
 import useSWR from 'swr';
 
 const Services_Ab = () => {
-    const { data } = useSWR('https://ld.mdtamiz.com/api/services', fetcher);
+    const { data } = useSWR('https://server.lineardigital.co/api/services', fetcher);
     const services: ServiceType[] = data || [];
     if (!data) {
         return <div>Loading...</div>;

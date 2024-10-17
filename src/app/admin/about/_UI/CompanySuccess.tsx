@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 import useSWR from 'swr';
 
 const CompanySuccess = () => {
-    const { data: title } = useSWR('https://ld.mdtamiz.com/api/titles/66c89d5fb31d2cc0b1eccc5a', fetcher);
+    const { data: title } = useSWR('https://server.lineardigital.co/api/titles/66c89d5fb31d2cc0b1eccc5a', fetcher);
 
     const [content, setContent] = React.useState({
         name: "",

@@ -22,7 +22,7 @@ export interface Pricing {
     description: string;
 }
 const page = () => {
-    const { data } = useSWR('https://ld.mdtamiz.com/api/pricing', fetcher);
+    const { data } = useSWR('https://server.lineardigital.co/api/pricing', fetcher);
     
     const [category, setCategory] = useState("");
     const [pricing, setPricing] = useState<Pricing[]>([]);

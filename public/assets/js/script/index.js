@@ -6,7 +6,7 @@ const getHero = async () => {
     const heroTitle = document.getElementById('hero-title')
     const heroDesc = document.getElementById('hero-desc')
 
-    const ur = 'https://ld.mdtamiz.com/api/titles/65240a3908b45b9c479349ff'
+    const ur = 'https://server.lineardigital.co/api/titles/65240a3908b45b9c479349ff'
     const res = await fetch(ur)
     const data = await res.json();
     heroTitle.innerHTML = data.title
@@ -27,13 +27,13 @@ const getService = async () => {
     const service3_Name = document.getElementById('service3-name')
     const service3_Desc = document.getElementById('service3-desc')
 
-    const ur = 'https://ld.mdtamiz.com/api/titles/65240ab608b45b9c47934a08'
+    const ur = 'https://server.lineardigital.co/api/titles/65240ab608b45b9c47934a08'
     const res = await fetch(ur)
     const data = await res.json();
     title.innerHTML = data.title
     desc.innerHTML = data.description
 
-    const ur2 = 'https://ld.mdtamiz.com/api/services'
+    const ur2 = 'https://server.lineardigital.co/api/services'
     const res2 = await fetch(ur2)
     const services = await res2.json();
     service1_Name.innerHTML = services[0].name
@@ -54,7 +54,7 @@ const getAbout = async () => {
     const desc = document.getElementById('about-desc')
 
 
-    const ur = 'https://ld.mdtamiz.com/api/titles/65240b4708b45b9c47934a0e'
+    const ur = 'https://server.lineardigital.co/api/titles/65240b4708b45b9c47934a0e'
     const res = await fetch(ur)
     const data = await res.json();
     title.innerHTML = data.title
@@ -72,7 +72,7 @@ const getWhy = async () => {
     const title = document.getElementById('why-title')
     const desc = document.getElementById('why-desc')
 
-    const ur = 'https://ld.mdtamiz.com/api/titles/652ed33c185f243a20a18115'
+    const ur = 'https://server.lineardigital.co/api/titles/652ed33c185f243a20a18115'
     const res = await fetch(ur)
     const data = await res.json();
     title.innerHTML = data.title
@@ -89,7 +89,7 @@ const getProject = async () => {
     const portfolio_App = document.querySelector('.portfolio-web') //Portfolio web
 
 
-    const url = 'https://ld.mdtamiz.com/api/portfolio/get/web'
+    const url = 'https://server.lineardigital.co/api/portfolio/get/web'
     const res = await fetch(url)
     const data = await res.json();
     data.forEach((item) => {
@@ -122,7 +122,7 @@ const getPortfolioWebApp = async () => {
 
     const portfolio_Web_App = document.querySelector('.portfolio-web-app') //Portfolio web App
 
-    const url = 'https://ld.mdtamiz.com/api/portfolio/get/web-app'
+    const url = 'https://server.lineardigital.co/api/portfolio/get/web-app'
     const res = await fetch(url)
     const data = await res.json();
     data.forEach((item) => {
@@ -155,7 +155,7 @@ const getPortfolioPrint = async () => {
 
     const portfolio_Web_App = document.querySelector('.portfolio-print') //Portfolio web Print Design
 
-    const url = 'https://ld.mdtamiz.com/api/portfolio/get/print'
+    const url = 'https://server.lineardigital.co/api/portfolio/get/print'
     const res = await fetch(url)
     const data = await res.json();
     data.forEach((item) => {
@@ -186,7 +186,7 @@ const getPortfolioEditorial = async () => {
 
     const portfolio_Web_App = document.querySelector('.portfolio-editorial') //portfolio-editorial 
 
-    const url = 'https://ld.mdtamiz.com/api/portfolio/get/print'
+    const url = 'https://server.lineardigital.co/api/portfolio/get/print'
     const res = await fetch(url)
     const data = await res.json();
     data.forEach((item) => {

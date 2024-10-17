@@ -3,7 +3,7 @@ const faqContainer = document.querySelector('.faqContainer')
 
 
 const getFaq = async () => {
-    const res = await fetch('https://ld.mdtamiz.com/api/faq')
+    const res = await fetch('https://server.lineardigital.co/api/faq')
     const data = await res.json()
 
     data.map((d) => {

@@ -10,7 +10,7 @@ import toast from 'react-hot-toast';
 import useSWR from 'swr';
 
 const SliderEdit = () => {
-    const { data } = useSWR('https://ld.mdtamiz.com/api/titles/65240a3908b45b9c479349ff', fetcher)
+    const { data } = useSWR('https://server.lineardigital.co/api/titles/65240a3908b45b9c479349ff', fetcher)
     const [content, setContent] = React.useState({
         title: data?.title,
         description: data?.description

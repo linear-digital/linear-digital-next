@@ -9,8 +9,8 @@ import toast from 'react-hot-toast';
 import useSWR from 'swr';
 
 const ServiceEdit = () => {
-    const { data, isLoading } = useSWR('https://ld.mdtamiz.com/api/services', fetcher)
-    const { data: service, isLoading: isLoadingService } = useSWR('https://ld.mdtamiz.com/api/titles/65240ab608b45b9c47934a08', fetcher)
+    const { data, isLoading } = useSWR('https://server.lineardigital.co/api/services', fetcher)
+    const { data: service, isLoading: isLoadingService } = useSWR('https://server.lineardigital.co/api/titles/65240ab608b45b9c47934a08', fetcher)
 
     const [services, setServices] = useState([
         {

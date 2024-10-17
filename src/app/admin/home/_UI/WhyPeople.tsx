@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import useSWR from 'swr';
 async function getData() {
     try {
-        const res = await axios.get('https://ld.mdtamiz.com/api/titles/652ed33c185f243a20a18115')
+        const res = await axios.get('https://server.lineardigital.co/api/titles/652ed33c185f243a20a18115')
         // The return value is *not* serialized
         // You can return Date, Map, Set, etc.
         return res.data
@@ -14,7 +14,7 @@ async function getData() {
     }
 }
 const WhyPeople = () => {
-    const { data } = useSWR('https://ld.mdtamiz.com/api/titles/652ed33c185f243a20a18115', async () => getData())
+    const { data } = useSWR('https://server.lineardigital.co/api/titles/652ed33c185f243a20a18115', async () => getData())
     const [content, setContent] = React.useState({
         title: "",
         description: ""
@@ -27,7 +27,7 @@ const WhyPeople = () => {
 
     const updateData = async () => {
         try {
-            const res = await axios.put('https://ld.mdtamiz.com/api/titles/652ed33c185f243a20a18115', { ...content, others })
+            const res = await axios.put('https://server.lineardigital.co/api/titles/652ed33c185f243a20a18115', { ...content, others })
             toast.success("Updated Successfully!")
         } catch (error) {
             toast.error("Something went wrong!")

@@ -6,7 +6,7 @@ import useSWR from 'swr';
 import { ITeamProps } from '../admin/team/_UI/Team';
 
 const Team = () => {
-    const {data} = useSWR('https://ld.mdtamiz.com/api/team', fetcher);
+    const {data} = useSWR('https://server.lineardigital.co/api/team', fetcher);
 
     const team = data as ITeamProps[];
     return (

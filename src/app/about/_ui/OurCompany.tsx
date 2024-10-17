@@ -4,9 +4,9 @@ import React from 'react';
 import useSWR from 'swr';
 
 const OurCompany = () => {
-    const { data: title } = useSWR('https://ld.mdtamiz.com/api/titles/66c8a020b31d2cc0b1eccc5b',
+    const { data: title } = useSWR('https://server.lineardigital.co/api/titles/66c8a020b31d2cc0b1eccc5b',
         fetcher);
-    const { data: title2 } = useSWR('https://ld.mdtamiz.com/api/titles/66c8a1f9b31d2cc0b1eccc5c',
+    const { data: title2 } = useSWR('https://server.lineardigital.co/api/titles/66c8a1f9b31d2cc0b1eccc5c',
         fetcher);
 
     return (

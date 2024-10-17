@@ -2,9 +2,9 @@
 const teamTitle = document.querySelector('.team-title');
 const teamDesc = document.querySelector('#team-description');
 const getTeam = async () => {
-    const res = await fetch('https://ld.mdtamiz.com/api/team')
+    const res = await fetch('https://server.lineardigital.co/api/team')
     const data = await res.json();
-    const tres = await fetch('https://ld.mdtamiz.com/api/titles/65369178d701163943d3f98d')
+    const tres = await fetch('https://server.lineardigital.co/api/titles/65369178d701163943d3f98d')
     const tdata = await tres.json();
 
     teamTitle.innerHTML = tdata.title;

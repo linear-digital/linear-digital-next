@@ -1,5 +1,5 @@
 
-const priceing_Url = 'https://ld.mdtamiz.com/api/pricing'
+const priceing_Url = 'https://server.lineardigital.co/api/pricing'
 
 
 const getpricingGraphic = async () => {
@@ -228,7 +228,7 @@ getpricingGraphic()
 const generalPrice = async () => {
     const priceContainer = document.getElementById('general-container')
 
-    const res = await fetch('https://ld.mdtamiz.com/api/generalprice')
+    const res = await fetch('https://server.lineardigital.co/api/generalprice')
     const data = await res.json()
 
     data.map(d => {

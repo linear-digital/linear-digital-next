@@ -10,7 +10,7 @@ const getallreview = async () => {
     return res.data
 }
 const Review = ({ page }: any) => {
-    const { data: review } = useSWR('https://ld.mdtamiz.com/api/review', async () => await getallreview())
+    const { data: review } = useSWR('https://server.lineardigital.co/api/review', async () => await getallreview())
     return (
         <section className="testimonial-area-two">
             <div className="container">

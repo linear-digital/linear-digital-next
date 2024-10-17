@@ -9,8 +9,8 @@ import { fetcher } from '@/util/fetcher';
 const ClientData = ({ page }: { page: string }) => {
     // const data = await getData()
     // const faq = await getFaq()
-    const { data } = useSWR('https://ld.mdtamiz.com/api/generalprice', fetcher)
-    const { data: faq } = useSWR('https://ld.mdtamiz.com/api/faq', fetcher)
+    const { data } = useSWR('https://server.lineardigital.co/api/generalprice', fetcher)
+    const { data: faq } = useSWR('https://server.lineardigital.co/api/faq', fetcher)
     return (
         <div className='container'>
             {

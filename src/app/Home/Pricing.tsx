@@ -6,7 +6,7 @@ import { fetcher } from '@/util/fetcher';
 
 const Pricing = () => {
 
-    const { data } = useSWR('https://ld.mdtamiz.com/api/pricing', fetcher)
+    const { data } = useSWR('https://server.lineardigital.co/api/pricing', fetcher)
     const [pricing, setPricing] = React.useState([]);
     const [category, setCategory] = React.useState('graphic');
 

@@ -12,7 +12,7 @@ export interface ITeamProps {
     details: string[];
 }
 const Team = () => {
-    const { data } = useSWR('https://ld.mdtamiz.com/api/team', fetcher);
+    const { data } = useSWR('https://server.lineardigital.co/api/team', fetcher);
     const team = data as ITeamProps[];
     return (
         <div className='container py-5'>

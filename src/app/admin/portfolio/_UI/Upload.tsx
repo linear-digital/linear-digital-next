@@ -51,7 +51,7 @@ const UploadImage = ({ imageUrl, setImageUrl }: { imageUrl: string, setImageUrl:
                 listType="picture-card"
                 className="avatar-uploader "
                 showUploadList={false}
-                action="https://ld.mdtamiz.com/api/upload"
+                action="https://server.lineardigital.co/api/upload"
                 onChange={handleChange}
             >
                 {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}

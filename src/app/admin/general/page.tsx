@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 import { Button, Input } from 'antd';
 
 const page = () => {
-    const { data } = useSWR('https://ld.mdtamiz.com/api/generalprice', fetcher);
+    const { data } = useSWR('https://server.lineardigital.co/api/generalprice', fetcher);
     const onFinish = async (event: any) => {
         event.preventDefault()
         try {

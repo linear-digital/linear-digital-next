@@ -6,7 +6,7 @@ import React from 'react';
 import useSWR from 'swr';
 
 const CompanySuccess = () => {
-    const { data: title } = useSWR('https://ld.mdtamiz.com/api/titles/66c89d5fb31d2cc0b1eccc5a', fetcher);
+    const { data: title } = useSWR('https://server.lineardigital.co/api/titles/66c89d5fb31d2cc0b1eccc5a', fetcher);
 
     return (
         <div>

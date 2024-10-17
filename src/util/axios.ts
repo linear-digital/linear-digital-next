@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const local = 'http://localhost:4000/api'
-const server = 'https://ld.mdtamiz.com/api'
+const server = 'https://server.lineardigital.co/api'
 const api = axios.create({
     baseURL: server,
     headers: {
@@ -15,6 +15,6 @@ const api = axios.create({
 
 export default api
 
-//https://ld.mdtamiz.com
+//https://server.lineardigital.co
 
 // http://localhost:4000

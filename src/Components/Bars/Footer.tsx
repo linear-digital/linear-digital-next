@@ -5,7 +5,7 @@ import React from 'react';
 import useSWR from 'swr';
 
 const Footer = () => {
-    const { data } = useSWR('https://ld.mdtamiz.com/api/titles/66c8ad9ab31d2cc0b1eccc5e', fetcher);
+    const { data } = useSWR('https://server.lineardigital.co/api/titles/66c8ad9ab31d2cc0b1eccc5e', fetcher);
     return (
         <footer>
             <div className="footer-area-two footer-area-three">

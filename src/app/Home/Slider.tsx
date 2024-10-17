@@ -15,7 +15,7 @@ async function getData() {
     }
 }
 const Slider = () => {
-    const { data } = useSWR('https://ld.mdtamiz.com/api/titles/65240a3908b45b9c479349ff', async () => await getData())
+    const { data } = useSWR('https://server.lineardigital.co/api/titles/65240a3908b45b9c479349ff', async () => await getData())
     return (
         <section className="slider-area">
             <div className="slider-active">
